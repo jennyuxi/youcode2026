@@ -70,6 +70,62 @@
     "tags": ["Fundraising Strategies", "Nonprofit Management", "Community Engagement"]
   },
   {
+    "link": "https://theincmagazine.com/wp-content/uploads/2022/11/The-significance-of-diversity-and-cultural-awareness-in-the-classroom1.png",
+    "name": "Cultural Awareness & Inclusion",
+    "description": "Explores how to work respectfully with people from different backgrounds, promoting inclusivity and reducing bias.",
+    "number": "5 lessons",
+    "length": "450 mins / 7.5 hrs",
+    "teacher": {
+      "name": "Jie Li",
+      "pic": "./assets/teacher6",
+      "experience": "2 years",
+      "rating": "./assets/star3_5.png"
+    },
+    "tags": ["Diversity and Inclusion", "Community Engagement"]
+  },
+  {
+    "link": "https://t4.ftcdn.net/jpg/06/44/09/87/360_F_644098722_qtq2jh70oxE3vtWG9oLe1cB6e0jpGDVf.jpg",
+    "name": "Mental Health First Aid",
+    "description": "Introduces how to recognize signs of mental health challenges and provide initial support before professional help is available.",
+    "number": "5 lessons",
+    "length": "450 mins / 7.5 hrs",
+    "teacher": {
+      "name": "Jie Li",
+      "pic": "./assets/teacher6",
+      "experience": "2 years",
+      "rating": "./assets/star3_5.png"
+    },
+    "tags": ["Volunteer Training", "Community Engagement"]
+  },
+  {
+    "link": "https://clueylearning.com.au/wp-content/uploads/2019/10/What-is-tutoring-Different-types-of-tutoring-explained.jpg",
+    "name": "Teaching & Tutoring Skills",
+    "description": "Provides strategies for helping others learn, including lesson planning, explaining concepts, and adapting to different learning styles.",
+    "number": "5 lessons",
+    "length": "450 mins / 7.5 hrs",
+    "teacher": {
+      "name": "Jie Li",
+      "pic": "./assets/teacher6",
+      "experience": "2 years",
+      "rating": "./assets/star3_5.png"
+    },
+    "tags": ["Volunteer Training", "Community Engagement", "Leadership Skills"]
+  },
+  {
+    "link": "https://www.app.com/gcdn/-mm-/d5b99f3ad23e56fc75759fd4ae2cd796bd93e213/c=0-178-3500-2155/local/-/media/2016/06/10/NJGroup/AsburyPark/636011468476991795-Vampire---7.JPG?width=660&height=373&fit=crop&format=pjpg&auto=webp",
+    "name": "Crisis Intervention & Support",
+    "description": "Trains volunteers to assist individuals in distress, including de-escalation techniques and providing emotional support.",
+    "number": "5 lessons",
+    "length": "450 mins / 7.5 hrs",
+    "teacher": {
+      "name": "Jie Li",
+      "pic": "./assets/teacher6",
+      "experience": "2 years",
+      "rating": "./assets/star3_5.png"
+    },
+    "tags": ["Volunteer Training", "Community Engagement"]
+  },
+  {
     "link": "https://www.teacheracademy.eu/wp-content/uploads/2021/06/environmental_stewardship-608x405.jpg",
     "name": "Environmental Stewardship",
     "description": "Focuses on sustainability practices, conservation efforts, and how volunteers can contribute to environmental protection.",
