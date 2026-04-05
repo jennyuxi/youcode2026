@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         
         <div>
-          <h2 className="text-xl font-bold mb-2">BEADB</h2>
+          <h2 className="text-xl font-bold mb-2">beaDB</h2>
           <p> Built by students for volunteers.</p>
         </div>
 
