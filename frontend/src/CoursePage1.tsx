@@ -21,12 +21,12 @@ export default function CourseHomepage() {
       link: "/lessonPage1",
     },
     {
-      title: "Building Relationships to Support Communities",
+      title: "Lesson 2: Building Relationships to Support Communities",
       length: "15 min",
       link: "/lesson/2",
     },
     {
-      title: "Types of Volunteering",
+      title: "Lesson 3: Types of Volunteering",
       length: "12 min",
       link: "/lesson/3",
     },
