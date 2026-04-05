@@ -43,14 +43,12 @@ export default function CourseHomepage() {
         
         <div className="flex-1 p-8">
 
-          {/* 🔧 REPLACE: Course title */}
           <header className="mb-8">
             <h1 className="text-3xl font-bold mb-2">
               Introduction to Modern Physics
             </h1>
           </header>
 
-          {/* 🔧 REPLACE: Course description + instructor */}
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-2 border-b pb-1">
               About this course
