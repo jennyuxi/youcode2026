@@ -32,7 +32,7 @@ export default function Course({
                 <img
                     src={link}
                     alt="Cover"
-                    className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
+                    className="relative z-20 aspect-video w-full object-cover"
                 />
                 <CardHeader>
                     <CardAction className="flex gap-2 flex-wrap">
