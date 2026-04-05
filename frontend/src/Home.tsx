@@ -32,6 +32,7 @@ function Home() {
             link={c.link}
             name={c.name}
             description={c.description}
+            teacher = {c.teacher}
             tags={c.tags}
             />
             </div>
