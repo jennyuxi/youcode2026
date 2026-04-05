@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
+import Course from './components/course.tsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,6 +19,7 @@ function App() {
         <div>
           <h1>Get started</h1>
           <p>
+            <Course></Course>
             Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
           </p>
         </div>
