@@ -12,7 +12,7 @@ const About: React.FC = () => {
     <div className="fixed top-0 left-0 right-0 z-50">
         <Navbar />
     </div>
-    <div className="flex pt-[76px] mr-80">
+    <div className="flex pt-[76px] mr-80 bg-green-50">
         <section className="about-section p-6 max-w-2xl mx-auto">
         
         <h1 className="text-3xl font-bold mb-4">About</h1>

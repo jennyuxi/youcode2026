@@ -32,7 +32,7 @@ function Home() {
         </div>
 
         {/* Main content with padding to avoid navbar + space for friends list */}
-        <div className="flex pt-[76px] mr-80">
+        <div className="flex pt-[76px] mr-80 bg-green-50">
             {/* LEFT: main content */}
             <div className="flex-1 m-2 p-4 overflow-y-auto">
             <div className="flex gap-4 items-center mb-4">
@@ -67,8 +67,7 @@ function Home() {
         <div className="fixed top-[76px] right-0 h-[calc(100vh-76px)] w-80">
             <FriendsList />
         </div>
-
-        <Footer />
+        <Footer/>
     </>
   )
 }

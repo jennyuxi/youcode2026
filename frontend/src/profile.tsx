@@ -22,7 +22,7 @@ function Profile() {
       </div>
 
       {/* Page content */}
-      <main className="pt-[76px] min-h-screen bg-gray-50 px-6 py-8">
+      <main className="pt-[76px] min-h-screen bg-gray-50 px-6 py-8 bg-green-50">
         <div className="max-w-5xl mx-auto">
           {/* Back button */}
           <button
@@ -125,10 +125,10 @@ function Profile() {
               </div>
             </div>
           </section>
-
-            <Footer/>
         </div>
+        
       </main>
+      <Footer/>
     </>
   )
 }
