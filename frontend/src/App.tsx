@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
@@ -8,13 +7,11 @@ import Filter from './components/filter.tsx'
 import Navbar from './components/navbar.tsx'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <section>
         <div className="hero p-1 border-1 border-black">
-          <Navbar><Navbar/>
+          <Navbar></Navbar>
         </div>
 
         <div className="m-2 p-4 border-1 border-black flex-1">
