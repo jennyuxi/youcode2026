@@ -17,7 +17,7 @@ function Profile() {
   return (
     <>
       {/* Fixed navbar */}
-      <div className="fixed top-0 left-0 right-0 z-50 border-b border-gray-300 bg-white">
+      <div className="fixed top-0 left-0 right-0 z-50">
         <Navbar />
       </div>
 

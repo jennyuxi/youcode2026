@@ -5,7 +5,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 
 export default function Navbar() {
   return (
-    <header className="w-full bg-white">
+    <header className="w-full bg-white border-b border-black-300">
       <div className="flex items-center px-4 py-2">
         
         {/* LEFT SIDE */}

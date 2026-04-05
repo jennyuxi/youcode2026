@@ -38,7 +38,7 @@ const Forum: React.FC = () => {
   ];
 
   return (
-    <div className="flex h-screen flex-col bg-white font-sans">
+    <div className="flex h-screen flex-col font-sans">
       
       <Navbar />
 
