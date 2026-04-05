@@ -15,7 +15,7 @@ function Home() {
         <Navbar />
         </div>
 
-        <div className="m-2 p-4 border-1 border-black flex-1 mr-80">
+        <div className="m-2 p-4 flex-1 mr-80">
         <div className="flex gap-4 items-center mb-4">
             <div>
             <SearchBar />
@@ -25,7 +25,7 @@ function Home() {
             </div>
         </div>
 
-        <h1>Courses</h1>
+        <h1 className="mb-3 text-xl font-bold">Courses</h1>
         <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-4">
             {courses.map((c, idx) => (
             <div key={idx} className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-4">
