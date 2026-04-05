@@ -1,7 +1,6 @@
 import { Badge } from "@/components/ui/badge"
 import {
   Card,
-  CardAction,
   CardContent,
   CardDescription,
   CardFooter,
@@ -9,6 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Avatar, AvatarImage } from "@/components/ui/avatar"
+import { Link } from "react-router-dom"
 import teacher1 from "../assets/teacher1.png"
 import teacher2 from "../assets/teacher2.png"
 import teacher4 from "../assets/teacher4.png"
@@ -69,7 +69,7 @@ export default function Course({
     tags = []
     }: CourseProps) {
         return (
-            <a href={classLink}>
+            <Link to={classLink}>
                 <Card className="relative mx-auto w-full max-w-sm pt-0 cursor-pointer hover:scale-[1.01] transition">
                 <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
                 <img
@@ -120,6 +120,6 @@ export default function Course({
                     />
                 </CardFooter>
                 </Card>
-            </a>
+            </Link>
         )
 }
