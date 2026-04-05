@@ -5,10 +5,10 @@ import './App.css'
 import Course from './components/course.tsx'
 import SearchBar from './components/searchbar.tsx'
 import Filter from './components/filter.tsx'
+import { Routes, Route, Link } from 'react-router-dom'
+import About from './About.tsx'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <section>
@@ -82,10 +82,7 @@ function App() {
           <p>Your questions, answered</p>
           <ul>
             <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
+              <Link to="/About">About</Link>
             </li>
             <li>
               <a href="https://react.dev/" target="_blank">
@@ -153,9 +150,6 @@ function App() {
           </ul>
         </div>
       </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
     </>
   )
 }
