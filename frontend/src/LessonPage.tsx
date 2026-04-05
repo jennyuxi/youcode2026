@@ -1,9 +1,9 @@
 "use client"
 
 import React, { useState } from "react"
-import { Button } from "@/components/ui/button"
 import Navbar from "@/components/navbar"
 import FriendsList from "@/components/FriendsList"
+import { Button } from "@/components/ui/button"
 
 const lesson = {
   title: "Lesson 1: Forces",

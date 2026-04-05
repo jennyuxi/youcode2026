@@ -15,6 +15,7 @@ export default function Navbar() {
             <Link to="/" className="text-2xl font-bold tracking-wide">
                 beaDB
             </Link>
+            <Link to="/About" className="hover:underline">About</Link>
             <Link to="/Forum" className="hover:underline">FAQ</Link>
         </div>
 

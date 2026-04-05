@@ -1,10 +1,11 @@
 "use client"
 
 import React, { useState } from "react"
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
-import { Button } from "@/components/ui/button"
 import Navbar from "@/components/navbar"
 import FriendsList from "@/components/FriendsList"
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
+import { Button } from "@/components/ui/button"
+
 
 type Answer = {
   text: string
