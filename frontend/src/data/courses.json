@@ -1,5 +1,6 @@
 [
   {
+    "classLink": "/coursepage",
     "link": "https://icma.org/sites/default/files/2021-04/AdobeStock_406571643.jpg",
     "name": "Community Outreach & Engagement",
     "description": "Teaches how to effectively connect with diverse communities, build trust, and organize outreach initiatives that encourage participation.",
@@ -14,6 +15,7 @@
     "tags": ["Community Engagement", "Diversity and Inclusion"]
   },
   {
+    "classLink": "/coursepage",
     "link": "https://hseretailshop.com/wp-content/uploads/2019/06/Basic-First-Aid-for-Medical-Emergencies.jpg",
     "name": "First Aid & Basic Emergency Response",
     "description": "Covers essential life-saving skills like CPR, wound care, and how to respond calmly during emergencies.",
@@ -28,6 +30,7 @@
     "tags": ["Volunteer Training"]
   },
   {
+    "classLink": "/coursepage",
     "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1SBPd3QxzKgMHTk10BPIr_-eVCxeS5Z8_4A&s",
     "name": "Communication & Active Listening",
     "description": "Focuses on interpersonal skills, including empathy, conflict resolution, and how to communicate clearly with people in need.",
@@ -42,6 +45,7 @@
     "tags": ["Volunteer Training", "Community Engagement", "Diversity and Inclusion"]
   },
   {
+    "classLink": "/coursepage",
     "link": "https://www.sterlingvolunteers.com/wp-content/uploads/2021/06/TSK-366-730x580-1.jpg",
     "name": "Leadership in Volunteer Settings",
     "description": "Develops leadership skills such as team coordination, decision-making, and motivating others in non-profit environments.",
@@ -56,6 +60,7 @@
     "tags": ["Leadership Skills", "Volunteer Training", "Nonprofit Management"]
   },
   {
+    "classLink": "/coursepage",
     "link": "https://static.wixstatic.com/media/11062b_2cb2c16f2bd0467ead35d31a1ea960f8~mv2.jpeg/v1/fill/w_680,h_490,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_2cb2c16f2bd0467ead35d31a1ea960f8~mv2.jpeg",
     "name": "Event Planning for Non-Profits",
     "description": "Teaches how to organize fundraisers, community events, and awareness campaigns efficiently and effectively.",
@@ -70,6 +75,7 @@
     "tags": ["Fundraising Strategies", "Nonprofit Management", "Community Engagement"]
   },
   {
+    "classLink": "/coursepage",
     "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfWJZz3D1Gdt3CvF7UnUMn3eN0_CZvSOtuOw&s",
     "name": "Cultural Awareness & Inclusion",
     "description": "Explores how to work respectfully with people from different backgrounds, promoting inclusivity and reducing bias.",
@@ -84,6 +90,7 @@
     "tags": ["Diversity and Inclusion", "Community Engagement"]
   },
   {
+    "classLink": "/coursepage",
     "link": "https://t4.ftcdn.net/jpg/06/44/09/87/360_F_644098722_qtq2jh70oxE3vtWG9oLe1cB6e0jpGDVf.jpg",
     "name": "Mental Health First Aid",
     "description": "Introduces how to recognize signs of mental health challenges and provide initial support before professional help is available.",
@@ -98,6 +105,7 @@
     "tags": ["Volunteer Training", "Community Engagement"]
   },
   {
+    "classLink": "/coursepage",
     "link": "https://clueylearning.com.au/wp-content/uploads/2019/10/What-is-tutoring-Different-types-of-tutoring-explained.jpg",
     "name": "Teaching & Tutoring Skills",
     "description": "Provides strategies for helping others learn, including lesson planning, explaining concepts, and adapting to different learning styles.",
@@ -112,6 +120,7 @@
     "tags": ["Volunteer Training", "Community Engagement", "Leadership Skills"]
   },
   {
+    "classLink": "/coursepage",
     "link": "https://www.app.com/gcdn/-mm-/d5b99f3ad23e56fc75759fd4ae2cd796bd93e213/c=0-178-3500-2155/local/-/media/2016/06/10/NJGroup/AsburyPark/636011468476991795-Vampire---7.JPG?width=660&height=373&fit=crop&format=pjpg&auto=webp",
     "name": "Crisis Intervention & Support",
     "description": "Trains volunteers to assist individuals in distress, including de-escalation techniques and providing emotional support.",
@@ -126,6 +135,7 @@
     "tags": ["Volunteer Training"]
   },
   {
+    "classLink": "/coursepage",
     "link": "https://www.teacheracademy.eu/wp-content/uploads/2021/06/environmental_stewardship-608x405.jpg",
     "name": "Environmental Stewardship",
     "description": "Focuses on sustainability practices, conservation efforts, and how volunteers can contribute to environmental protection.",

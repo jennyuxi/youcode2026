@@ -49,6 +49,7 @@ function Home() {
                 {filteredCourses.map((c, idx) => (
                 <Course
                     key={idx}
+                    classLink={c.classLink}
                     link={c.link}
                     name={c.name}
                     description={c.description}
