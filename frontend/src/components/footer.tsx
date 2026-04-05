@@ -26,23 +26,18 @@ export default function Footer() {
           <h3 className="font-semibold mb-2">Connect</h3>
           <ul className="space-y-1 text-sm">
             <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
+              <a href="https://github.com/jennyuxi/youcode2026" target="_blank">
                 GitHub
               </a>
             </li>
             <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                Discord
+              <a href="https://devpost.com/submit-to/28700-youcode-2026/manage/submissions/986496/project-overview" target="_blank">
+                Devpost
               </a>
             </li>
             <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                Bluesky
+              <a href="https://docs.google.com/presentation/d/18edp3tC8_WajfX6GeaItMGeufkQ_RxmoaAkyjCwScIc/edit?usp=sharing" target="_blank">
+                Slides
               </a>
             </li>
           </ul>
