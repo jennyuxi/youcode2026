@@ -4,6 +4,7 @@ import viteLogo from './assets/vite.svg'
 import './App.css'
 import Course from './components/course.tsx'
 import SearchBar from './components/searchbar.tsx'
+import Filter from './components/filter.tsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,9 +16,15 @@ function App() {
             navbar with logo and name and (clickable) profile logo
         </div>
 
-        <div className="m-2 p-4 border-1 border-black">
-          <SearchBar></SearchBar>
-          insert filters (under searchbar)
+        <div className="m-2 p-4 border-1 border-black flex-1">
+            <div className="flex gap-4 items-center mb-4">
+                <div> {/* SearchBar fixed width */}
+                    <SearchBar />
+                </div>
+                <div> {/* Filter fixed width */}
+                    <Filter />
+                </div>
+            </div>
           <h1>Courses</h1>
           <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-4">
             <Course></Course>
