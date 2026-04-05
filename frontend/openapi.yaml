@@ -1,0 +1,93 @@
+openapi: 3.0.3
+info:
+  title: YouCode2026 Frontend API
+  version: 1.0.0
+  description: API definition for the YouCode2026 frontend. This API provides endpoints for searching and retrieving course and charity data.
+servers:
+  - url: http://localhost:8000/api
+paths:
+  /courses:
+    get:
+      summary: Get a list of courses
+      description: Returns a list of available courses with optional search and filter parameters.
+      parameters:
+        - in: query
+          name: search
+          schema:
+            type: string
+          description: Search query for course name or description.
+        - in: query
+          name: tag
+          schema:
+            type: string
+          description: Filter courses by tag.
+      responses:
+        '200':
+          description: A list of courses.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Course'
+  /charities:
+    get:
+      summary: Get a list of charities
+      description: Returns a list of available charities with optional search.
+      parameters:
+        - in: query
+          name: search
+          schema:
+            type: string
+          description: Search query for charity name or description.
+      responses:
+        '200':
+          description: A list of charities.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Charity'
+components:
+  schemas:
+    Course:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "course_123"
+        name:
+          type: string
+          example: "Example Course"
+        description:
+          type: string
+          example: "Example Description"
+        teacher:
+          type: string
+          example: "Example Volunteer"
+        tags:
+          type: array
+          items:
+            type: string
+          example: ["math", "science"]
+        link:
+          type: string
+          format: uri
+          example: "https://avatar.vercel.sh/shadcn1"
+    Charity:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "charity_123"
+        name:
+          type: string
+          example: "Example Charity"
+        description:
+          type: string
+          example: "Charity Description"
+        website:
+          type: string
+          format: uri
+          example: "https://example.org"
