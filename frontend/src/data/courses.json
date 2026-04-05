@@ -1,6 +1,6 @@
 [
   {
-    "classLink": "/coursepage",
+    "classLink": "/CoursePage1",
     "link": "https://icma.org/sites/default/files/2021-04/AdobeStock_406571643.jpg",
     "name": "Community Outreach & Engagement",
     "description": "Teaches how to effectively connect with diverse communities, build trust, and organize outreach initiatives that encourage participation.",
@@ -15,7 +15,7 @@
     "tags": ["Community Engagement", "Diversity and Inclusion"]
   },
   {
-    "classLink": "/coursepage",
+    "classLink": "/CoursePage2",
     "link": "https://hseretailshop.com/wp-content/uploads/2019/06/Basic-First-Aid-for-Medical-Emergencies.jpg",
     "name": "First Aid & Basic Emergency Response",
     "description": "Covers essential life-saving skills like CPR, wound care, and how to respond calmly during emergencies.",
@@ -30,7 +30,7 @@
     "tags": ["Volunteer Training"]
   },
   {
-    "classLink": "/coursepage",
+    "classLink": "/CoursePage3",
     "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1SBPd3QxzKgMHTk10BPIr_-eVCxeS5Z8_4A&s",
     "name": "Communication & Active Listening",
     "description": "Focuses on interpersonal skills, including empathy, conflict resolution, and how to communicate clearly with people in need.",
@@ -45,7 +45,7 @@
     "tags": ["Volunteer Training", "Community Engagement", "Diversity and Inclusion"]
   },
   {
-    "classLink": "/coursepage",
+    "classLink": "/CoursePage4",
     "link": "https://www.sterlingvolunteers.com/wp-content/uploads/2021/06/TSK-366-730x580-1.jpg",
     "name": "Leadership in Volunteer Settings",
     "description": "Develops leadership skills such as team coordination, decision-making, and motivating others in non-profit environments.",

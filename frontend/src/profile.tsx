@@ -3,7 +3,7 @@ import Navbar from "./components/navbar.tsx"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import Footer from "./components/footer.tsx"
 
-function Profile() {
+function Profile() {    
   const navigate = useNavigate()
 
   const tags = ["Volunteer", "Mentor", "STEM", "Community Outreach"]

@@ -17,17 +17,17 @@ export default function CourseHomepage() {
   // 🔧 EDIT HERE: Add/remove lessons, update titles, durations, and links
   const lessons: Lesson[] = [
     {
-      title: "Lesson 1: Overview",
+      title: "Lesson 1: Introduction to Community Outreach",
       length: "10 min",
-      link: "/lessonPage",
+      link: "/lessonPage1",
     },
     {
-      title: "Lesson 2: Basics",
+      title: "Building Relationships to Support Communities",
       length: "15 min",
       link: "/lesson/2",
     },
     {
-      title: "Lesson 3: Forces",
+      title: "Types of Volunteering",
       length: "12 min",
       link: "/lesson/3",
     },
@@ -43,23 +43,21 @@ export default function CourseHomepage() {
         
         <div className="flex-1 p-8">
 
-          {/* 🔧 REPLACE: Course title */}
           <header className="mb-8">
             <h1 className="text-3xl font-bold mb-2">
-              Introduction to Modern Physics
+              Community Outreach & Engagement
             </h1>
           </header>
 
-          {/* 🔧 REPLACE: Course description + instructor */}
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-2 border-b pb-1">
               About this course
             </h2>
             <p className="mb-2">
-              This course provides a comprehensive introduction to modern physics.
+              This course teaches how to effectively connect with diverse communities, build trust, and organize outreach initiatives that encourage participation. Learners will develop communication strategies, partnership-building skills, and methods to create meaningful community impact.
             </p>
             <p>
-              <strong>Instructor:</strong> Dr. Jane Doe
+              <strong>Instructor:</strong> Abdul Kassab, with 8+ years of experience in community development and outreach programs.
             </p>
           </section>
 
@@ -71,12 +69,12 @@ export default function CourseHomepage() {
 
             <div className="mb-3">
               <h3 className="text-xl">Welcome!</h3>
-              <p>This course will start next week.</p>
+              <p>Get ready to explore real-world outreach strategies and community engagement techniques.</p>
             </div>
 
             <div>
               <h3 className="text-xl">Reminder</h3>
-              <p>Assignment 1 due Friday.</p>
+              <p> First activity involves mapping a local community and identifying outreach opportunities.</p>
             </div>
           </section>
 
