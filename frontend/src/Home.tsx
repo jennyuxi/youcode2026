@@ -13,7 +13,7 @@ function Home() {
   return (
     <>
       {/* Navbar fixed at top */}
-      <div className="hero p-1 border-b border-gray-200 fixed top-0 left-0 right-0 z-50">
+      <div className="fixed top-0 left-0 right-0 z-50 border-b border-black-300 bg-white">
         <Navbar />
       </div>
 
@@ -51,83 +51,54 @@ function Home() {
       </div>
 
       {/* Bottom sections */}
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <Link to="/About">About</Link>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+      <footer className="border-t border-gray-300 mt-30 px-6 py-10 bg-gray-50">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <div>
+            <h2 className="text-xl font-bold mb-2">BEADB</h2>
+            <p> Built by students for volunteers.</p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold mb-2">Navigation</h3>
+            <ul className="space-y-1 text-sm">
+              <li>
+                <Link to="/About" className="hover:underline">About</Link>
+              </li>
+              <li>
+                <Link to="/Forum" className="hover:underline">Forum</Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-semibold mb-2">Connect</h3>
+            <ul className="space-y-1 text-sm">
+              <li>
+                <a href="https://github.com/vitejs/vite" target="_blank">
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a href="https://chat.vite.dev/" target="_blank">
+                  Discord
+                </a>
+              </li>
+              <li>
+                <a href="https://x.com/vite_js" target="_blank">
+                  X.com
+                </a>
+              </li>
+              <li>
+                <a href="https://bsky.app/profile/vite.dev" target="_blank">
+                  Bluesky
+                </a>
+              </li>
+            </ul>
+          </div>
+
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      </footer>
     </>
   )
 }
