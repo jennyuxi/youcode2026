@@ -1,11 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { Avatar } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
+
 
 // Mock friend data
 interface Friend {
@@ -16,9 +17,14 @@ interface Friend {
 }
 
 const friends: Friend[] = [
-  { id: 1, name: "Alice", avatar: "/avatars/alice.jpg", messages: [] },
-  { id: 2, name: "Bob", avatar: "/avatars/bob.jpg", messages: [] },
-  { id: 3, name: "Charlie", avatar: "/avatars/charlie.jpg", messages: [] },
+  { id: 1, name: "Alice", avatar: "./src/assets/alice.jpg", messages: [] },
+  { id: 2, name: "Bob", avatar: "./src/assets/bob.jpg", messages: [] },
+  { id: 3, name: "Charlie", avatar: "./src/assets/charlie.jpg", messages: [] },
+  { id: 4, name: "Jack", avatar: "./src/assets/jack.jpg", messages: [] },
+  { id: 5, name: "Mergen", avatar: "./src/assets/mergen.jpg", messages: [] },
+  { id: 6, name: "Jenny", avatar: "./src/assets/jenny.jpg", messages: [] },
+  { id: 7, name: "Eva", avatar: "./src/assets/eva.jpg", messages: [] },
+  { id: 8, name: "Sean", avatar: "./src/assets/sean.jpg", messages: [] },
 ];
 
 export default function FriendsList() {
@@ -43,7 +49,7 @@ export default function FriendsList() {
       {activeFriend ? (
         // Chat view
         <Card className="flex flex-col flex-1">
-          <CardHeader className="px-4 py-2 border-b border-gray-300">
+          <CardHeader className="px-4 py-0 border-b border-gray-300">
             <CardTitle className="flex justify-between items-center">
               {activeFriend.name}
               <Button
@@ -95,9 +101,13 @@ export default function FriendsList() {
                 className="flex items-center justify-between px-4 py-3 hover:bg-gray-50"
               >
                 <div className="flex items-center gap-3">
-                  <Avatar>
-                    <img src={friend.avatar} alt={friend.name} />
-                  </Avatar>
+                <Avatar className="w-10 h-10">
+                <img
+                    src={friend.avatar}
+                    alt={friend.name}
+                    className="rounded-full"
+                />
+                </Avatar>
                   <span>{friend.name}</span>
                 </div>
                 <Button size="sm" onClick={() => setActiveFriend(friend)}>
