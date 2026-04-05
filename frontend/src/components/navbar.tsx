@@ -13,8 +13,9 @@ export default function Navbar() {
           <img src={logo} className="h-12 w-auto" alt="Logo" />
 
             <Link to="/" className="text-2xl font-bold tracking-wide">
-                BEADB
+                beaDB
             </Link>
+            <Link to="/Forum" className="hover:underline">FAQ</Link>
         </div>
 
         {/* RIGHT SIDE */}
