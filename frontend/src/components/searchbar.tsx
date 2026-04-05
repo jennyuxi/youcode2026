@@ -7,12 +7,13 @@ export default function SearchBar() {
   const [query, setQuery] = useState("")
 
   return (
-    <div className="w-full max-w-md">
+    <div className="w-full mx-auto px-6">
       <Input
+        className="w-[800px]"  // <-- add this
         placeholder="Search for courses..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        autoComplete="off" // 🔑 disables browser autofill
+        autoComplete="off"
       />
     </div>
   )
