@@ -1,11 +1,11 @@
 "use client"
 
-import { useState } from "react"
 import { Input } from "@/components/ui/input"
 
-export default function SearchBar() {
-  const [query, setQuery] = useState("")
-
+export default function SearchBar({query, setQuery}: {
+    query: string
+    setQuery: (value: string) => void
+}) {
   return (
     <div className="w-full">
       <Input
