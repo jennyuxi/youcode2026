@@ -5,7 +5,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 
 export default function Navbar() {
   return (
-    <header className="w-full bg-white">
+    <header className="w-full bg-white border-b border-black-300">
       <div className="flex items-center px-4 py-2">
         
         {/* LEFT SIDE */}
@@ -16,7 +16,7 @@ export default function Navbar() {
                 beaDB
             </Link>
             <Link to="/About" className="hover:underline">About</Link>
-            <Link to="/Forum" className="hover:underline">FAQ</Link>
+            <Link to="/Forum" className="hover:underline">Forum</Link>
         </div>
 
         {/* RIGHT SIDE */}

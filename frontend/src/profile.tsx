@@ -17,12 +17,12 @@ function Profile() {
   return (
     <>
       {/* Fixed navbar */}
-      <div className="fixed top-0 left-0 right-0 z-50 border-b border-gray-300 bg-white">
+      <div className="fixed top-0 left-0 right-0 z-50">
         <Navbar />
       </div>
 
       {/* Page content */}
-      <main className="pt-[76px] min-h-screen bg-gray-50 px-6 py-8">
+      <main className="pt-[76px] min-h-screen bg-gray-50 px-6 py-8 bg-green-50">
         <div className="max-w-5xl mx-auto">
           {/* Back button */}
           <button
@@ -125,10 +125,10 @@ function Profile() {
               </div>
             </div>
           </section>
-
-            <Footer/>
         </div>
+        
       </main>
+      <Footer/>
     </>
   )
 }

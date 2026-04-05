@@ -38,7 +38,7 @@ const Forum: React.FC = () => {
   ];
 
   return (
-    <div className="flex h-screen flex-col bg-white font-sans">
+    <div className="flex h-screen flex-col font-sans">
       
       <Navbar />
 
@@ -46,10 +46,10 @@ const Forum: React.FC = () => {
       <div className="flex flex-1 overflow-hidden">
         
         {/* Left Content Area (Document Layout & Footer) */}
-        <main className="flex-1 overflow-y-auto">
+        <main className="flex-1 overflow-y-auto bg-green-50">
           
           {/* Main content constrained to a readable width like the About page */}
-          <div className="mx-auto max-w-4xl p-8 md:p-12 lg:p-16">
+          <div className="mx-auto max-w-4xl p-8 md:p-12 lg:p-16 ">
             <h1 className="mb-10 text-3xl font-bold text-gray-900">Frequently Asked Questions</h1>
             
             {/* Simple stacked layout instead of a grid */}
