@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 import Course from './components/course.tsx'
+import SearchBar from './components/searchbar.tsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,7 +16,7 @@ function App() {
         </div>
 
         <div className="m-2 p-4 border-1 border-black">
-          insert searchbar
+          <SearchBar></SearchBar>
           insert filters (under searchbar)
           <h1>Courses</h1>
           <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-4">
