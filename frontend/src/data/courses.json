@@ -5,7 +5,7 @@
     "name": "Community Outreach & Engagement",
     "description": "Teaches how to effectively connect with diverse communities, build trust, and organize outreach initiatives that encourage participation.",
     "number": "8 lessons",
-    "length": "720 mins / 12 hrs",
+    "length": "12 hrs",
     "teacher": {
       "name": "Abdul Kassab",
       "pic": "teacher7",
@@ -20,7 +20,7 @@
     "name": "First Aid & Basic Emergency Response",
     "description": "Covers essential life-saving skills like CPR, wound care, and how to respond calmly during emergencies.",
     "number": "10 lessons",
-    "length": "900 mins / 15 hrs",
+    "length": "15 hrs",
     "teacher": {
       "name": "Annie Lawson",
       "pic": "teacher2",
@@ -35,7 +35,7 @@
     "name": "Communication & Active Listening",
     "description": "Focuses on interpersonal skills, including empathy, conflict resolution, and how to communicate clearly with people in need.",
     "number": "6 lessons",
-    "length": "540 mins / 9 hrs",
+    "length": "9 hrs",
     "teacher": {
       "name": "Rachel Hartsfield",
       "pic": "teacher4",
@@ -50,7 +50,7 @@
     "name": "Leadership in Volunteer Settings",
     "description": "Develops leadership skills such as team coordination, decision-making, and motivating others in non-profit environments.",
     "number": "8 lessons",
-    "length": "720 mins / 12 hrs",
+    "length": "12 hrs",
     "teacher": {
       "name": "Wallace Li",
       "pic": "teacher1",
@@ -65,7 +65,7 @@
     "name": "Event Planning for Non-Profits",
     "description": "Teaches how to organize fundraisers, community events, and awareness campaigns efficiently and effectively.",
     "number": "6 lessons",
-    "length": "540 mins / 9 hrs",
+    "length": "9 hrs",
     "teacher": {
       "name": "Gabby Walker",
       "pic": "teacher5",
@@ -80,7 +80,7 @@
     "name": "Cultural Awareness & Inclusion",
     "description": "Explores how to work respectfully with people from different backgrounds, promoting inclusivity and reducing bias.",
     "number": "5 lessons",
-    "length": "560 mins / 9 hrs",
+    "length": "9 hrs",
     "teacher": {
       "name": "Annie Lawson",
       "pic": "teacher2",
@@ -95,7 +95,7 @@
     "name": "Mental Health First Aid",
     "description": "Introduces how to recognize signs of mental health challenges and provide initial support before professional help is available.",
     "number": "5 lessons",
-    "length": "450 mins / 7.5 hrs",
+    "length": "7.5 hrs",
     "teacher": {
       "name": "Jie Li",
       "pic": "teacher6",
@@ -110,7 +110,7 @@
     "name": "Teaching & Tutoring Skills",
     "description": "Provides strategies for helping others learn, including lesson planning, explaining concepts, and adapting to different learning styles.",
     "number": "5 lessons",
-    "length": "600 mins / 11 hrs",
+    "length": "11 hrs",
     "teacher": {
       "name": "Abdul Kassab",
       "pic": "teacher7",
@@ -125,7 +125,7 @@
     "name": "Crisis Intervention & Support",
     "description": "Trains volunteers to assist individuals in distress, including de-escalation techniques and providing emotional support.",
     "number": "5 lessons",
-    "length": "610 mins / 14 hrs",
+    "length": "14 hrs",
     "teacher": {
       "name": "Wallace Li",
       "pic": "teacher1",
@@ -140,7 +140,7 @@
     "name": "Environmental Stewardship",
     "description": "Focuses on sustainability practices, conservation efforts, and how volunteers can contribute to environmental protection.",
     "number": "5 lessons",
-    "length": "450 mins / 7.5 hrs",
+    "length": "7.5 hrs",
     "teacher": {
       "name": "Jie Li",
       "pic": "teacher6",
