@@ -3,7 +3,7 @@ import Course from './components/course.tsx'
 import SearchBar from './components/searchbar.tsx'
 import Filter from './components/filter.tsx'
 import { Link } from 'react-router-dom'
-import courses from './courses.json'
+import courses from '@/data/courses.json'
 import Navbar from './components/navbar.tsx'
 
 function Home() {

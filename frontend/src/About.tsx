@@ -1,10 +1,13 @@
 import React from 'react'
 import memoryCrisisGraph from './assets/memory-crisis.png';
 import knowledgeAnchorGraph from './assets/knowledge-anchor.png';
+import Navbar from './components/navbar';
 
 
 const About: React.FC = () => {
   return (
+    <>
+    <Navbar></Navbar>
     <section className="about-section p-6 max-w-2xl mx-auto">
       <h1 className="text-3xl font-bold mb-4">About</h1>
       <p className="mb-4">
@@ -76,6 +79,7 @@ const About: React.FC = () => {
       {/* NEW SECTION END */}
       
     </section>
+    </>
   )
 }
 
