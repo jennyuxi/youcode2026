@@ -5,7 +5,7 @@ import Course from './components/course.tsx'
 import SearchBar from './components/searchbar.tsx'
 import Filter from './components/filter.tsx'
 import { Link } from 'react-router-dom'
-import courses from '@/data/courses.json'
+import courses from './data/courses.json'
 import Navbar from './components/navbar.tsx'
 import FriendsList from './components/FriendsList.tsx'
 
@@ -38,6 +38,9 @@ function Home() {
                 link={c.link}
                 name={c.name}
                 description={c.description}
+                number={c.number}
+                length={c.length}
+                teacher={c.teacher}
                 tags={c.tags}
               />
             ))}
