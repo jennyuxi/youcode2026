@@ -19,7 +19,7 @@ export default function CourseHomepage() {
     {
       title: "Lesson 1: Overview",
       length: "10 min",
-      link: "/lessonPage",
+      link: "/lessonPage3",
     },
     {
       title: "Lesson 2: Basics",
