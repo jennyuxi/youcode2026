@@ -4,13 +4,14 @@ import SearchBar from './components/searchbar.tsx'
 import Filter from './components/filter.tsx'
 import { Link } from 'react-router-dom'
 import courses from '@/data/courses.json'
+import Navbar from './components/navbar.tsx'
 
 function Home() {
   return (
     <>
       <section>
         <div className="hero p-1 border-1 border-black">
-            navbar with logo and name and (clickable) profile logo
+            <Navbar/>
         </div>
 
         <div className="m-2 p-4 border-1 border-black flex-1">
