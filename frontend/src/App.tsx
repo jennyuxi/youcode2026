@@ -5,6 +5,7 @@ import './App.css'
 import Course from './components/course.tsx'
 import SearchBar from './components/searchbar.tsx'
 import Filter from './components/filter.tsx'
+import Navbar from './components/navbar.tsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,7 +14,7 @@ function App() {
     <>
       <section>
         <div className="hero p-1 border-1 border-black">
-            navbar with logo and name and (clickable) profile logo
+          <Navbar><Navbar/>
         </div>
 
         <div className="m-2 p-4 border-1 border-black flex-1">
