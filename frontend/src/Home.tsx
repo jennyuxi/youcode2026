@@ -5,39 +5,39 @@ import Filter from './components/filter.tsx'
 import { Link } from 'react-router-dom'
 import courses from '@/data/courses.json'
 import Navbar from './components/navbar.tsx'
+import FriendsList from './components/FriendsList.tsx'
 
 function Home() {
   return (
     <>
       <section>
         <div className="hero p-1 border-1 border-black">
-            <Navbar/>
+          <Navbar/>
         </div>
 
-        <div className="m-2 p-4 border-1 border-black flex-1">
-            <div className="flex gap-4 items-center mb-4">
-                <div> {/* SearchBar fixed width */}
-                    <SearchBar />
-                </div>
-                <div> {/* Filter fixed width */}
-                    <Filter />
-                </div>
+        <div className="m-2 p-4 border-1 border-black flex-1 mr-80">
+        <div className="flex gap-4 items-center mb-4">
+            <div>
+            <SearchBar />
             </div>
-          <h1>Courses</h1>
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-4">
-          {courses.map((c, idx) => (
-            <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-4">
-            <Course
-            key={idx}
-            link={c.link}
-            name={c.name}
-            description={c.description}
-            // teacher={c.teacher}
-            tags={c.tags}
-            />
+            <div>
+            <Filter />
             </div>
-        ))}
-          </div>
+        </div>
+
+        <h1>Courses</h1>
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-4">
+            {courses.map((c, idx) => (
+            <div key={idx} className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-4">
+                <Course
+                link={c.link}
+                name={c.name}
+                description={c.description}
+                tags={c.tags}
+                />
+            </div>
+            ))}
+        </div>
         </div>
       </section>
 
@@ -118,6 +118,9 @@ function Home() {
           </ul>
         </div>
       </section>
+
+      
+      <FriendsList />
     </>
   )
 }
