@@ -2,7 +2,6 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './Home.tsx'
 import About from './About.tsx'
 import Forum from './Forum.tsx'
-import UploadPage from './UploadPage.tsx'
 import CoursePage1 from './CoursePage1.tsx'
 import CoursePage2 from './CoursePage2.tsx'
 import CoursePage3 from './CoursePage3.tsx'
@@ -20,7 +19,6 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/forum" element={<Forum/>}/>
-        <Route path='/uploadpage' element={<UploadPage/>}/>
         <Route path="/CoursePage1" element={<CoursePage1/>}/>
         <Route path="/CoursePage2" element={<CoursePage2/>}/>
         <Route path="/CoursePage3" element={<CoursePage3/>}/>
