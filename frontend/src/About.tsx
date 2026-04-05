@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from './components/navbar';
 import memoryCrisisGraph from './assets/memory-crisis.png';
 import knowledgeAnchorGraph from './assets/knowledge-anchor.png';
 import Footer from './components/footer'
 import FriendsList from './components/FriendsList'
+import FriendsMindMap from './components/FriendsMindMap';
 
 const About: React.FC = () => {
+    const [showMindMap, setShowMindMap] = useState(false);
   return (
     <>
     {/* Navbar fixed at top */}
@@ -81,9 +83,24 @@ const About: React.FC = () => {
             Instead of just "finding more people," we focus on <b>exponential mentoring.</b> By utilizing the existing network of "Knowledge Anchors" to efficiently onboard new volunteers, we ensure that every hour contributed adds to a permanent, growing community of expertise.
             </p>
         </div>      
+        {/* Friends list fixed on right */}
         <div className="fixed top-[76px] right-0 h-[calc(100vh-76px)] w-80">
-            <FriendsList />
+            <FriendsList onShowMindMap={() => setShowMindMap(true)} />
         </div>
+        {showMindMap && (
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/40">
+            <div className="bg-white rounded-xl shadow-xl w-[80vw] max-w-4xl p-4 relative">
+            <button
+                className="absolute top-3 right-3 text-gray-500 hover:text-black"
+                onClick={() => setShowMindMap(false)}
+            >
+                ✕
+            </button>
+            <h2 className="text-lg font-semibold mb-2">Friends Mind Map</h2>
+            <FriendsMindMap />
+            </div>
+        </div>
+        )}
         </section>
     </div>
 

@@ -6,6 +6,7 @@ import Navbar from "@/components/navbar"
 import FriendsList from "@/components/FriendsList"
 import Footer from "@/components/footer"
 import { useNavigate } from "react-router-dom"
+import FriendsMindMap from "./components/FriendsMindMap"
 
 const lesson = {
   title: "Lesson 1: Communication & Active Listening",
@@ -55,6 +56,7 @@ You'll learn how to understand others, respond thoughtfully, and build stronger 
 }
 
 export default function LessonPage() {
+    const [showMindMap, setShowMindMap] = useState(false);
   const [selectedAnswers, setSelectedAnswers] = useState<Record<number, number>>({})
   const navigate = useNavigate()
 
@@ -150,9 +152,24 @@ export default function LessonPage() {
 
       </div>
 
+      {/* Friends list fixed on right */}
       <div className="fixed top-[76px] right-0 h-[calc(100vh-76px)] w-80">
-        <FriendsList />
-      </div>
+            <FriendsList onShowMindMap={() => setShowMindMap(true)} />
+        </div>
+        {showMindMap && (
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/40">
+            <div className="bg-white rounded-xl shadow-xl w-[80vw] max-w-4xl p-4 relative">
+            <button
+                className="absolute top-3 right-3 text-gray-500 hover:text-black"
+                onClick={() => setShowMindMap(false)}
+            >
+                ✕
+            </button>
+            <h2 className="text-lg font-semibold mb-2">Friends Mind Map</h2>
+            <FriendsMindMap />
+            </div>
+        </div>
+        )}
     </>
   )
 }

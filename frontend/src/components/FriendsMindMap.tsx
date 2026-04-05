@@ -16,30 +16,21 @@ const friends = [
 
 // Example realistic friend relationships
 const links = [
-    // Alice is socially active, connected to many
-    { source: 1, target: 2 },
-    { source: 1, target: 3 },
-    { source: 1, target: 5 },
-    
-    // Bob has moderate connections
-    { source: 2, target: 3 },
-    { source: 2, target: 4 },
-  
-    // Charlie bridges two clusters
-    { source: 3, target: 6 },
-    
-    // Peripheral connections
-    { source: 4, target: 5 },
-    { source: 5, target: 6 },
-    { source: 6, target: 7 },
-    { source: 7, target: 8 },
-  
-    // Small cluster at the end
-    { source: 8, target: 5 }, 
-  ];
+  { source: 1, target: 2 },
+  { source: 1, target: 3 },
+  { source: 1, target: 5 },
+  { source: 2, target: 3 },
+  { source: 2, target: 4 },
+  { source: 3, target: 6 },
+  { source: 4, target: 5 },
+  { source: 5, target: 6 },
+  { source: 6, target: 7 },
+  { source: 7, target: 8 },
+  { source: 8, target: 5 },
+];
 
 export default function FriendsMindMap() {
-  const fgRef = useRef<any>();
+    const fgRef = useRef<any>(null);
 
   return (
     <div className="w-full h-[500px] border rounded-lg">
@@ -48,16 +39,17 @@ export default function FriendsMindMap() {
         graphData={{ nodes: friends, links }}
         nodeLabel="name"
         nodeAutoColorBy="id"
+        linkDistance={120} // increase spacing between nodes
         nodeCanvasObject={(node, ctx, globalScale) => {
           const label = node.name;
-          const fontSize = 12 / globalScale;
+          const fontSize = 10 / globalScale; // smaller text
           ctx.font = `${fontSize}px Sans-Serif`;
           ctx.fillStyle = "steelblue";
           ctx.beginPath();
-          ctx.arc(node.x!, node.y!, 8, 0, 2 * Math.PI, false);
+          ctx.arc(node.x!, node.y!, 5, 0, 2 * Math.PI, false); // smaller node
           ctx.fill();
           ctx.fillStyle = "black";
-          ctx.fillText(label, node.x! + 10, node.y! + 3);
+          ctx.fillText(label, node.x! + 8, node.y! + 3);
         }}
         linkColor={() => "#aaa"}
       />
