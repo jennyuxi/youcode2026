@@ -7,13 +7,21 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+
+type Teacher = {
+    name: string;
+    pic: string;
+    experience: string;
+    rating: string;
+}
 
 type CourseProps = {
     classLink?: string;
     link?: string;
     name?: string;
     description?: string;
-    teacher?: string;
+    teacher?: Teacher;
     tags?: string[];
 }
 
@@ -22,7 +30,12 @@ export default function Course({
     link = "https://avatar.vercel.sh/shadcn1", 
     name = "Example Course", 
     description = "Example Description",
-    teacher = "Example Volunteer",
+    teacher = {
+        name: "Example Teacher",
+        pic: "",
+        experience: "X years",
+        rating: ""
+    },
     tags = []
     }: CourseProps) {
         return (
@@ -35,20 +48,41 @@ export default function Course({
                     className="relative z-20 aspect-video w-full object-cover"
                 />
                 <CardHeader>
-                    <CardAction className="flex gap-2 flex-wrap">
+                    <div className="flex gap-2 flex-wrap">
                         {tags.map((tag) => (
-                            <Badge key={tag} variant="secondary">
+                        <Badge key={tag} variant="secondary">
                             {tag}
-                            </Badge>
+                        </Badge>
                         ))}
-                    </CardAction>
+                    </div>
                     <CardTitle>{name}</CardTitle>
                     <CardDescription>
                     {description}
                     </CardDescription>
                 </CardHeader>
-                <CardFooter>
-                    Taught by {teacher}
+                <CardFooter className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                        <Avatar>
+                        <AvatarImage src={teacher.pic} />
+                        </Avatar>
+
+                        {/* Text block */}
+                        <div className="flex flex-col">
+                        <span>
+                            {teacher.name}
+                        </span>
+                        <span className="text-sm text-gray-500">
+                            {teacher.experience}
+                        </span>
+                        </div>
+                    </div>
+
+                    {/* Rating image */}
+                    <img
+                        src={teacher.rating}
+                        alt="rating"
+                        className="h-5 w-auto"
+                    />
                 </CardFooter>
                 </Card>
             </a>
