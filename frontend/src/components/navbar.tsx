@@ -16,7 +16,7 @@ export default function Navbar() {
                 beaDB
             </Link>
             <Link to="/About" className="hover:underline">About</Link>
-            <Link to="/Forum" className="hover:underline">FAQ</Link>
+            <Link to="/Forum" className="hover:underline">Forum</Link>
         </div>
 
         {/* RIGHT SIDE */}
