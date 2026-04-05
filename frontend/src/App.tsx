@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 import Course from './components/course.tsx'
 
@@ -10,28 +9,31 @@ function App() {
 
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+      <section>
+        <div className="hero p-1 border-1 border-black">
+            navbar with logo and name and (clickable) profile logo
         </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            <Course></Course>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
 
-      <div className="ticks"></div>
+        <div className="m-2 p-4 border-1 border-black">
+          insert searchbar
+          insert filters (under searchbar)
+          <h1>Courses</h1>
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-4">
+            <Course></Course>
+            <Course></Course>
+            <Course></Course>
+            <Course></Course>
+            <Course></Course>
+            <Course></Course>
+            <Course></Course>
+            <Course></Course>
+            <Course></Course>
+            <Course></Course>
+            <Course></Course>
+            <Course></Course>
+          </div>
+        </div>
+      </section>
 
       <section id="next-steps">
         <div id="docs">
