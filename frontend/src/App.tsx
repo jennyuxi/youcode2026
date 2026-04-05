@@ -1,11 +1,10 @@
-import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 import Course from './components/course.tsx'
+import Filter from './components/filter.tsx'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -16,7 +15,7 @@ function App() {
 
         <div className="m-2 p-4 border-1 border-black">
           insert searchbar
-          insert filters (under searchbar)
+            <Filter></Filter>
           <h1>Courses</h1>
           <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-4">
             <Course></Course>
