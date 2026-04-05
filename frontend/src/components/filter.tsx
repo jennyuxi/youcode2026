@@ -21,7 +21,7 @@ export default function Filter() {
         <SelectContent position="popper">
           <SelectGroup>
           <SelectItem value="all">
-            All Topics
+            All topics
           </SelectItem>
             {uniqueTags.map(tag => (
             <SelectItem key={tag} value={tag}>
