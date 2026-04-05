@@ -1,6 +1,6 @@
 import React from 'react'
-import memoryCrisisGraph from '../assets/memory-crisis.png';
-import knowledgeAnchorGraph from '../assets/knowledge-anchor.png';
+import memoryCrisisGraph from './assets/memory-crisis.png';
+import knowledgeAnchorGraph from './assets/knowledge-anchor.png';
 
 
 const About: React.FC = () => {
