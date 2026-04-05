@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom"
 import Navbar from "./components/navbar.tsx"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
+import Footer from "./components/footer.tsx"
 
 function Profile() {
   const navigate = useNavigate()
@@ -125,21 +126,7 @@ function Profile() {
             </div>
           </section>
 
-          {/* Optional links */}
-          <div className="mt-6 flex gap-4">
-            <Link
-              to="/"
-              className="rounded-md border border-gray-300 bg-white px-4 py-2 hover:bg-gray-100"
-            >
-              Home
-            </Link>
-            <Link
-              to="/Forum"
-              className="rounded-md border border-gray-300 bg-white px-4 py-2 hover:bg-gray-100"
-            >
-              Forum
-            </Link>
-          </div>
+            <Footer/>
         </div>
       </main>
     </>
