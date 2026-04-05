@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './components/navbar.tsx';
 import FriendsList from './components/FriendsList.tsx';
 import Footer from './components/footer.tsx'
+import FriendsMindMap from './components/FriendsMindMap.tsx';
 
 const Forum: React.FC = () => {
+    const [showMindMap, setShowMindMap] = useState(false);
   const faqs = [
     {
       id: 1,
@@ -84,10 +86,24 @@ const Forum: React.FC = () => {
           <Footer/>
         </main>
 
-        {/* Right Sidebar - Static relative to the scrolling main content */}
-        <aside className="w-72 border-l border-gray-200 bg-white overflow-y-auto hidden lg:block">
-          <FriendsList />
-        </aside>
+        {/* Friends list fixed on right */}
+        <div className="fixed top-[76px] right-0 h-[calc(100vh-76px)] w-80">
+            <FriendsList onShowMindMap={() => setShowMindMap(true)} />
+        </div>
+        {showMindMap && (
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/40">
+            <div className="bg-white rounded-xl shadow-xl w-[80vw] max-w-4xl p-4 relative">
+            <button
+                className="absolute top-3 right-3 text-gray-500 hover:text-black"
+                onClick={() => setShowMindMap(false)}
+            >
+                ✕
+            </button>
+            <h2 className="text-lg font-semibold mb-2">Friends Mind Map</h2>
+            <FriendsMindMap />
+            </div>
+        </div>
+        )}
 
       </div>
     </div>

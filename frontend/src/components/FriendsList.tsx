@@ -8,6 +8,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { Link } from "react-router-dom"
 
+interface FriendsListProps {
+    onShowMindMap: () => void;
+  }
+
 
 // Mock friend data
 interface Friend {
@@ -28,7 +32,7 @@ const friends: Friend[] = [
   { id: 8, name: "Sean", avatar: "./src/assets/sean.jpg", messages: [] },
 ];
 
-export default function FriendsList() {
+export default function FriendsList({ onShowMindMap }: FriendsListProps) {
   const [activeFriend, setActiveFriend] = useState<Friend | null>(null);
   const [messageText, setMessageText] = useState("");
 
@@ -43,9 +47,12 @@ export default function FriendsList() {
   return (
     <div className="flex flex-col h-full bg-white border-l border-gray-200 shadow-lg">
       {/* Permanent Friends Header */}
-      <div className="px-4 py-3 border-b border-gray-300 text-lg font-semibold">
-        Friends
-      </div>
+      <div
+  className="px-4 py-3 border-b border-gray-300 text-lg font-semibold cursor-pointer hover:bg-gray-100"
+  onClick={onShowMindMap} // pass this as a prop
+    >
+    Friends
+    </div>
 
       {activeFriend ? (
         // Chat view

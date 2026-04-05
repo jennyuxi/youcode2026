@@ -1,10 +1,11 @@
 "use client"
 
-import React from "react"
+import React, { useState } from "react"
 import Navbar from "@/components/navbar"
 import FriendsList from "@/components/FriendsList"
 import LessonButton from "@/components/lessonButton"
 import Footer from "@/components/footer.tsx"
+import FriendsMindMap from "./components/FriendsMindMap"
 
 type Lesson = {
   title: string
@@ -13,6 +14,7 @@ type Lesson = {
 }
 
 export default function CourseHomepage() {
+    const [showMindMap, setShowMindMap] = useState(false);
 
   const lessons: Lesson[] = [
     {
@@ -99,10 +101,24 @@ export default function CourseHomepage() {
 
           </div>
 
-          {/* RIGHT SIDEBAR */}
-          <div className="fixed top-[76px] right-0 h-[calc(100vh-76px)] w-80">
-            <FriendsList />
-          </div>
+        {/* Friends list fixed on right */}
+        <div className="fixed top-[76px] right-0 h-[calc(100vh-76px)] w-80">
+            <FriendsList onShowMindMap={() => setShowMindMap(true)} />
+        </div>
+        {showMindMap && (
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/40">
+            <div className="bg-white rounded-xl shadow-xl w-[80vw] max-w-4xl p-4 relative">
+            <button
+                className="absolute top-3 right-3 text-gray-500 hover:text-black"
+                onClick={() => setShowMindMap(false)}
+            >
+                ✕
+            </button>
+            <h2 className="text-lg font-semibold mb-2">Friends Mind Map</h2>
+            <FriendsMindMap />
+            </div>
+        </div>
+        )}
 
         </div>
 
