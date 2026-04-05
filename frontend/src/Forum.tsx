@@ -1,67 +1,143 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Forum: React.FC = () => {
-  // 1. We now initialize the state with an empty string so the box starts blank.
-  const [answer, setAnswer] = useState("");
+  // Your provided Q&A data, structured for easy rendering
+  const faqs = [
+    {
+      id: 1,
+      question: "Does the retiring volunteer need to download an app or own a smartphone?",
+      answer: "Not at all. We designed this specifically for zero digital friction. Volunteers can use a standard landline or a basic cell phone to dial a dedicated local number. The system gently prompts them with questions, and they just talk. For those who are slightly more tech-savvy, WhatsApp audio memos are also an option. No downloads, no passwords, no typing.",
+      tags: ["accessibility", "hardware"],
+      color: "bg-[#2A4D3E]" 
+    },
+    {
+      id: 2,
+      question: "Non-profits deal with sensitive community data. How do you handle privacy and security?",
+      answer: "Trust and safety are built into the core of the platform. This is a strictly closed-loop system for internal organizational use—not a public network. We process the audio to extract workflow data (like vendor names or de-escalation tactics), and the AI can be configured to automatically flag or redact sensitive personally identifiable information (PII) before it ever hits the incoming coordinator's dashboard.",
+      tags: ["privacy", "security"],
+      color: "bg-[#A66C47]" 
+    },
+    {
+      id: 3,
+      question: "What exactly happens to the audio after the volunteer hangs up?",
+      answer: "Our backend instantly transcribes the audio and runs it through a Natural Language Processing (NLP) model. Instead of just saving a 10-minute voice recording that no one will ever listen to, the AI extracts the entities—who, what, where, and when—and formats them into a clean, searchable 'Community Map'.",
+      tags: ["data", "ai process"],
+      color: "bg-[#4A5568]"
+    },
+    {
+      id: 4,
+      question: "Can this integrate with the tools our non-profit already uses?",
+      answer: "Yes. We know that non-profits survive on low-overhead tools and spreadsheets, not massive enterprise servers. The data our platform extracts can be easily exported into universally accessible formats like Google Sheets or simple CSVs. You don't need an IT department to maintain it, and it slides seamlessly into the workflows you already rely on.",
+      tags: ["integrations", "export"],
+      color: "bg-[#2B6CB0]"
+    },
+    {
+      id: 5,
+      question: "BC is diverse, and many of our best volunteers don't speak English as a first language. Will this still work?",
+      answer: "Absolutely. Accessibility is a primary design constraint. Our conversational AI supports multilingual transcription and translation. A community leader can share their vital relationship knowledge in Tagalog, Punjabi, or Mandarin, and the system will translate and map those insights into English for the incoming coordinator.",
+      tags: ["languages", "translation"],
+      color: "bg-[#D69E2E]"
+    }
+  ];
 
-  // The specific paragraph you want to appear
-  const exampleAnswer = "Great question! The biggest barrier to saving institutional memory isn't a lack of willingness; it's the friction of the tools. Traditional exit surveys and spreadsheets often feel like administrative homework, and they demand a level of digital literacy that many of our most experienced, long-term volunteers might not have.";
-
-  // 2. This function fires when the button is clicked, filling the text box.
-  const handleButtonClick = () => {
-    setAnswer(exampleAnswer);
-  };
+  // Dummy data to mimic the right sidebar from your screenshot
+  const sidebarItems = Array(10).fill({ name: "Charlie", action: "Chat" });
 
   return (
-    <div className="flex min-h-screen w-full flex-col items-center justify-center bg-gray-50 p-4">
-      <div className="w-full max-w-4xl rounded-2xl border border-gray-200 bg-white p-8 shadow-sm md:p-10">
+    <div className="flex min-h-screen flex-col bg-[#F8F9FA] font-sans">
+      
+      {/* Top Header */}
+      <header className="flex h-16 w-full items-center justify-between border-b border-gray-200 bg-white px-6">
+        <div className="flex items-center gap-3">
+          {/* Logo Placeholder */}
+          <div className="flex h-8 w-8 items-center justify-center bg-green-100 text-xl">
+            🏢
+          </div>
+          <span className="text-xl font-bold tracking-widest text-black">BEADB</span>
+        </div>
+        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-sm font-semibold text-gray-600">
+          SS
+        </div>
+      </header>
+
+      {/* Main Layout Area */}
+      <div className="flex flex-1 overflow-hidden">
         
-        <div className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-gray-500">
-          <span>🤝</span>
-          <span>PLATFORM ADOPTION — QUESTION 1</span>
-        </div>
-
-        <h1 className="mb-6 text-2xl text-gray-900 md:text-3xl" style={{ fontFamily: 'Georgia, serif' }}>
-          Why should our organization use this platform instead of just having retiring volunteers fill out an exit survey or update a shared Google Doc?
-        </h1>
-
-        <div className="mb-6 rounded-xl bg-[#F4F7F5] p-5 text-sm italic text-gray-600">
-          "Think about the friction involved in traditional tools versus our streamlined, conversational approach."
-        </div>
-
-        <textarea
-          className="mb-8 min-h-[160px] w-full resize-y rounded-xl border border-gray-200 bg-[#F9FAFB] p-5 text-gray-700 placeholder-gray-400 focus:border-[#335C4B] focus:outline-none focus:ring-1 focus:ring-[#335C4B]"
-          placeholder="Type your answer here, or use the voice button below..."
-          value={answer}
-          onChange={(e) => setAnswer(e.target.value)}
-        />
-
-        <div className="flex flex-wrap items-center gap-4">
-          {/* 3. We attached an onClick handler to trigger the function above */}
-          <button 
-            onClick={handleButtonClick}
-            className="flex items-center gap-2 rounded-lg bg-[#335C4B] px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#27483a]"
-          >
-            Save & next <span>&rarr;</span>
-          </button>
+        {/* Left Content Area (Grid) */}
+        <main className="flex-1 overflow-y-auto p-6 md:p-8">
+          <h2 className="mb-6 text-xl font-medium text-gray-900">Frequently Asked Questions</h2>
           
-          <button className="flex items-center gap-2 rounded-lg border border-[#F0D5C1] bg-[#FFF3EC] px-6 py-2.5 text-sm font-medium text-[#A66C47] transition-colors hover:bg-[#ffe8d9]">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
-              <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
-              <line x1="12" x2="12" y1="19" y2="22"></line>
-            </svg>
-            Answer by voice
-          </button>
-          
-          <button className="rounded-lg border border-gray-200 bg-white px-6 py-2.5 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-50">
-            Skip for now
-          </button>
-        </div>
+          {/* Responsive Grid */}
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {faqs.map((faq) => (
+              <div key={faq.id} className="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md">
+                
+                {/* Visual Header */}
+                <div className={`h-32 w-full ${faq.color} flex items-center justify-center p-4`}>
+                   <span className="text-4xl opacity-20">❓</span>
+                </div>
+                
+                {/* Card Content */}
+                <div className="flex flex-1 flex-col p-5">
+                  {/* Tags */}
+                  <div className="mb-3 flex flex-wrap gap-2">
+                    {faq.tags.map((tag, index) => (
+                      <span key={index} className="rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-600">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  {/* Question */}
+                  <h3 className="mb-3 text-lg font-bold leading-tight text-gray-900">
+                    {faq.question}
+                  </h3>
+                  
+                  {/* Answer */}
+                  <p className="text-sm leading-relaxed text-gray-500">
+                    {faq.answer}
+                  </p>
+                  
+                  {/* Spacer to push footer to bottom */}
+                  <div className="flex-1"></div>
+
+                  {/* Card Footer */}
+                  <div className="mt-6 flex items-center gap-3 border-t border-gray-100 pt-4">
+                    <div className="h-8 w-8 rounded-full border border-gray-200 bg-gray-50"></div>
+                    <div>
+                      <p className="text-xs font-medium text-gray-900">Support Team</p>
+                      <p className="text-xs text-gray-500">Official Answer</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            ))}
+          </div>
+        </main>
+
+        {/* Right Sidebar */}
+        <aside className="hidden w-72 overflow-y-auto border-l border-gray-200 bg-white lg:block">
+          <div className="flex flex-col">
+            {sidebarItems.map((item, index) => (
+              <div key={index} className="flex items-center justify-between border-b border-gray-100 px-6 py-4 hover:bg-gray-50">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-200 text-lg">
+                    👤
+                  </div>
+                  <span className="text-sm font-medium text-gray-700">{item.name}</span>
+                </div>
+                <button className="rounded-full bg-gray-900 px-4 py-1.5 text-xs font-medium text-white transition-colors hover:bg-gray-800">
+                  {item.action}
+                </button>
+              </div>
+            ))}
+          </div>
+        </aside>
 
       </div>
     </div>
   );
 };
 
-export default Forum
+export default Forum;
