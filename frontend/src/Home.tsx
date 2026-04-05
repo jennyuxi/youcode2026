@@ -11,8 +11,8 @@ function Home() {
   return (
     <>
       <section>
-        <div className="hero p-1 border-1 border-black">
-          <Navbar/>
+      <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b">
+        <Navbar />
         </div>
 
         <div className="m-2 p-4 border-1 border-black flex-1 mr-80">
