@@ -3,12 +3,16 @@ import {
     SelectContent,
     SelectGroup,
     SelectItem,
-    SelectLabel,
     SelectTrigger,
     SelectValue,
   } from "@/components/ui/select"
+import courses from "@/data/courses.json"
   
 export default function Filter() {
+    const uniqueTags = Array.from(
+        new Set(courses.flatMap(course => course.tags))
+    )
+
     return (
       <Select>
         <SelectTrigger className="w-full max-w-48">
@@ -16,12 +20,14 @@ export default function Filter() {
         </SelectTrigger>
         <SelectContent position="popper">
           <SelectGroup>
-            <SelectLabel>All topics</SelectLabel>
-            <SelectItem value="apple">Apple</SelectItem>
-            <SelectItem value="banana">Banana</SelectItem>
-            <SelectItem value="blueberry">Blueberry</SelectItem>
-            <SelectItem value="grapes">Grapes</SelectItem>
-            <SelectItem value="pineapple">Pineapple</SelectItem>
+          <SelectItem value="all">
+            All Topics
+          </SelectItem>
+            {uniqueTags.map(tag => (
+            <SelectItem key={tag} value={tag}>
+              {tag}
+            </SelectItem>
+          ))}
           </SelectGroup>
         </SelectContent>
       </Select>
