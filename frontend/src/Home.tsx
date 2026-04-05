@@ -3,6 +3,7 @@ import Course from './components/course.tsx'
 import SearchBar from './components/searchbar.tsx'
 import Filter from './components/filter.tsx'
 import { Link } from 'react-router-dom'
+import courses from './courses.json'
 
 function Home() {
   return (
@@ -23,48 +24,18 @@ function Home() {
             </div>
           <h1>Courses</h1>
           <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-4">
-            <Course 
-            link="https://icma.org/sites/default/files/2021-04/AdobeStock_406571643.jpg"
-            name="Community Outreach & Engagement" 
-            description="Teaches how to effectively connect with diverse communities, build trust, and organize outreach initiatives that encourage participation."
-            teacher="Mergen Tuguldur"
-            tags={["sggs", "sdha"]}
-            ></Course>
+          {courses.map((c, idx) => (
+            <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-4">
             <Course
-            link="https://hseretailshop.com/wp-content/uploads/2019/06/Basic-First-Aid-for-Medical-Emergencies.jpg"
-            name="First Aid & Basic Emergency Response"
-            description="Covers essential life-saving skills like CPR, wound care, and how to respond calmly during emergencies."
-            teacher="Mergen Tuguldur"
-            tags={["sggs", "sdha"]}
-            ></Course>
-            <Course
-            link="https://cdn-kggkn.nitrocdn.com/YZlskfpjyzvMlKrqErRKTLEylbscnFjo/assets/images/optimized/rev-f3fa24c/www.tssg.ca/wp-content/uploads/2023/04/Active-Listening.jpg"
-            name="Communication & Active Listening"
-            description="Focuses on interpersonal skills, including empathy, conflict resolution, and how to communicate clearly with people in need."
-            teacher="Mergen Tuguldur"
-            tags={["sggs", "sdha"]}
-            ></Course>
-            <Course
-            link="https://www.sterlingvolunteers.com/wp-content/uploads/2021/06/TSK-366-730x580-1.jpg"
-            name="Leadership in Volunteer Settings"
-            description="Develops leadership skills such as team coordination, decision-making, and motivating others in non-profit environments."
-            teacher="Mergen Tuguldur"
-            tags={["sggs", "sdha"]}
-            ></Course>
-            <Course
-            link="https://static.wixstatic.com/media/11062b_2cb2c16f2bd0467ead35d31a1ea960f8~mv2.jpeg/v1/fill/w_680,h_490,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_2cb2c16f2bd0467ead35d31a1ea960f8~mv2.jpeg"
-            name="Event Planning for Non-Profits"
-            description="Teaches how to organize fundraisers, community events, and awareness campaigns efficiently and effectively."
-            teacher="Mergen Tugulder"
-            tags={["sggs", "sdha"]}
-            ></Course>
-            <Course
-            link="https://www.teacheracademy.eu/wp-content/uploads/2021/06/environmental_stewardship-608x405.jpg"
-            name="Environmental Stewardship"
-            description="Focuses on sustainability practices, conservation efforts, and how volunteers can contribute to environmental protection."
-            teacher="Mergen Tuguldur"
-            tags={["sggs", "sdha"]}
-            ></Course>
+            key={idx}
+            link={c.link}
+            name={c.name}
+            description={c.description}
+            teacher={c.teacher}
+            tags={c.tags}
+            />
+            </div>
+        ))}
           </div>
         </div>
       </section>
