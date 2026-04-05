@@ -10,6 +10,7 @@ import LessonPage1 from './LessonPage1.tsx'
 import LessonPage2 from './LessonPage2.tsx'
 import LessonPage3 from './LessonPage3.tsx'
 import Profile from './profile.tsx'
+import FriendProfile from './FriendProfile.tsx'
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/lessonpage2" element={<LessonPage2/>}/>
         <Route path="/lessonpage3" element={<LessonPage3/>}/>
         <Route path="/profile" element={<Profile />} />
+        <Route path="/friendprofile" element={<FriendProfile/>}/>
     </Routes>
   )
 }

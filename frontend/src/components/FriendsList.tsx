@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
+import { Link } from "react-router-dom"
 
 
 // Mock friend data
@@ -101,6 +102,7 @@ export default function FriendsList() {
                 className="flex items-center justify-between px-4 py-3 hover:bg-gray-50"
               >
                 <div className="flex items-center gap-3">
+                <Link to="/friendprofile">
                 <Avatar className="w-10 h-10">
                 <img
                     src={friend.avatar}
@@ -108,6 +110,7 @@ export default function FriendsList() {
                     className="rounded-full"
                 />
                 </Avatar>
+                </Link>
                   <span>{friend.name}</span>
                 </div>
                 <Button size="sm" onClick={() => setActiveFriend(friend)}>
