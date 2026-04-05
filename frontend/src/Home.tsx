@@ -1,12 +1,12 @@
 "use client"
 
 import { useState } from "react"
+import Navbar from './components/navbar.tsx'
 import Course from './components/course.tsx'
 import SearchBar from './components/searchbar.tsx'
 import Filter from './components/filter.tsx'
 import { Link } from 'react-router-dom'
 import courses from './data/courses.json'
-import Navbar from './components/navbar.tsx'
 import FriendsList from './components/FriendsList.tsx'
 import Footer from "./components/footer"
 

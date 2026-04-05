@@ -1,8 +1,7 @@
 import React from 'react'
+import Navbar from './components/navbar';
 import memoryCrisisGraph from './assets/memory-crisis.png';
 import knowledgeAnchorGraph from './assets/knowledge-anchor.png';
-import Navbar from './components/navbar';
-
 
 const About: React.FC = () => {
   return (
@@ -42,7 +41,6 @@ const About: React.FC = () => {
 
       <hr className="my-8 border-gray-300" />
 
-      {/* NEW SECTION START */}
       <h2 className="text-2xl font-bold mb-4">Why Traditional Models Fail</h2>
       <p className="mb-6">
         Most tech interventions in the nonprofit sector focus on <b>recruitment</b>, but our data shows that <b>retention and knowledge transfer</b> are the real breaking points. Here is why we’ve moved beyond the traditional approaches:
@@ -75,9 +73,7 @@ const About: React.FC = () => {
         <p>
           Instead of just "finding more people," we focus on <b>exponential mentoring.</b> By utilizing the existing network of "Knowledge Anchors" to efficiently onboard new volunteers, we ensure that every hour contributed adds to a permanent, growing community of expertise.
         </p>
-      </div>
-      {/* NEW SECTION END */}
-      
+      </div>      
     </section>
     </>
   )
