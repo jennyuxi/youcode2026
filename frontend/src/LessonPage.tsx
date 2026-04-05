@@ -1,10 +1,12 @@
 "use client"
 
 import React, { useState } from "react"
+import { Button } from "@/components/ui/button"
 import Navbar from "@/components/navbar"
 import FriendsList from "@/components/FriendsList"
-import { Button } from "@/components/ui/button"
+import { useNavigate } from "react-router-dom"
 
+// 🔧 REPLACE: Lesson content, questions, hints, explanations
 const lesson = {
   title: "Lesson 1: Forces",
   content: `In this lesson, we will cover the basics of forces and Newton's laws.
@@ -36,6 +38,7 @@ You'll understand how forces affect motion and learn to calculate net force.`,
 
 export default function LessonPage() {
   const [selectedAnswers, setSelectedAnswers] = useState<Record<number, number>>({})
+  const navigate = useNavigate()
 
   const handleClick = (qIndex: number, aIndex: number) => {
     setSelectedAnswers(prev => ({ ...prev, [qIndex]: aIndex }))
@@ -43,24 +46,38 @@ export default function LessonPage() {
 
   return (
     <>
-      {/* Navbar fixed at top */}
-      <div className="hero p-1 border-b border-gray-200 fixed top-0 left-0 right-0 z-50">
+      <div className="fixed top-0 left-0 right-0 z-50 border-b border-gray-200 bg-white">
         <Navbar />
       </div>
 
-      {/* Main flex container */}
       <div className="flex pt-[76px] mr-80 h-[calc(100vh-76px)]">
-        {/* LEFT: Lesson text */}
-        <div className="w-1/2 h-full overflow-y-auto border-r p-8">
+        
+        {/* 🔧 LEFT SIDE: Replace lesson title + lesson text */}
+        <div className="w-1/2 h-full overflow-y-auto p-8 border-r">
+          
+          <Button
+            variant="outline"
+            className="mb-4"
+            onClick={() => navigate(-1)}
+          >
+            ← Back
+          </Button>
+
           <h1 className="text-3xl font-bold mb-4">{lesson.title}</h1>
+
           {lesson.content.split("\n").map((para, idx) => (
-            <p key={idx} className="mb-4 text-base">{para}</p>
+            <p key={idx} className="mb-4 text-base">
+              {para}
+            </p>
           ))}
         </div>
 
-        {/* RIGHT: Questions */}
+        {/* 🔧 RIGHT SIDE: Replace questions + answers + feedback */}
         <div className="w-1/2 h-full overflow-y-auto p-8">
-          <h2 className="text-2xl font-semibold mb-4 border-b pb-2">Questions</h2>
+          <h2 className="text-2xl font-semibold mb-4 border-b pb-2">
+            Questions
+          </h2>
+
           {lesson.questions.map((q, qIndex) => {
             const selected = selectedAnswers[qIndex]
 
@@ -108,7 +125,6 @@ export default function LessonPage() {
         </div>
       </div>
 
-      {/* RIGHT: FriendsList fixed, aligned with navbar */}
       <div className="fixed top-[76px] right-0 h-[calc(100vh-76px)] w-80">
         <FriendsList />
       </div>
