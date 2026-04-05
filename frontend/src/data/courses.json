@@ -1,86 +1,86 @@
 [
-    {
-      "link": "https://icma.org/sites/default/files/2021-04/AdobeStock_406571643.jpg",
-      "name": "Community Outreach & Engagement",
-      "description": "Teaches how to effectively connect with diverse communities, build trust, and organize outreach initiatives that encourage participation.",
-      "number": "X lessons",
-      "length": "X mins/hrs",
-      "teacher": {
-        "name": "Mergen Tuguldur",
-        "pic": "",
-        "experience": "X years",
-        "rating": ""
-      },
-      "tags": ["sggs", "sdha"]
+  {
+    "link": "https://icma.org/sites/default/files/2021-04/AdobeStock_406571643.jpg",
+    "name": "Community Outreach & Engagement",
+    "description": "Teaches how to effectively connect with diverse communities, build trust, and organize outreach initiatives that encourage participation.",
+    "number": "8 lessons",
+    "length": "720 mins / 12 hrs",
+    "teacher": {
+      "name": "Abdul Kassab",
+      "pic": "./assets/teacher7",
+      "experience": "8 years",
+      "rating": "./assets/star4_5.png"
     },
-    {
-      "link": "https://hseretailshop.com/wp-content/uploads/2019/06/Basic-First-Aid-for-Medical-Emergencies.jpg",
-      "name": "First Aid & Basic Emergency Response",
-      "description": "Covers essential life-saving skills like CPR, wound care, and how to respond calmly during emergencies.",
-      "number": "X lessons",
-      "length": "X mins/hrs",
-      "teacher": {
-        "name": "Mergen Tuguldur",
-        "pic": "",
-        "experience": "X years",
-        "rating": ""
-      },
-      "tags": ["sggs", "sdha"]
+    "tags": ["Community Engagement", "Diversity and Inclusion"]
+  },
+  {
+    "link": "https://hseretailshop.com/wp-content/uploads/2019/06/Basic-First-Aid-for-Medical-Emergencies.jpg",
+    "name": "First Aid & Basic Emergency Response",
+    "description": "Covers essential life-saving skills like CPR, wound care, and how to respond calmly during emergencies.",
+    "number": "10 lessons",
+    "length": "900 mins / 15 hrs",
+    "teacher": {
+      "name": "Annie Lawson",
+      "pic": "./assets/teacher2",
+      "experience": "3 years",
+      "rating": "./assets/star4_5.png"
     },
-    {
-      "link": "https://cdn-kggkn.nitrocdn.com/YZlskfpjyzvMlKrqErRKTLEylbscnFjo/assets/images/optimized/rev-f3fa24c/www.tssg.ca/wp-content/uploads/2023/04/Active-Listening.jpg",
-      "name": "Communication & Active Listening",
-      "description": "Focuses on interpersonal skills, including empathy, conflict resolution, and how to communicate clearly with people in need.",
-      "number": "X lessons",
-      "length": "X mins/hrs",
-      "teacher": {
-        "name": "Mergen Tuguldur",
-        "pic": "",
-        "experience": "X years",
-        "rating": ""
-      },
-      "tags": ["sggs", "sdha"]
+    "tags": ["Volunteer Training"]
+  },
+  {
+    "link": "https://cdn-kggkn.nitrocdn.com/YZlskfpjyzvMlKrqErRKTLEylbscnFjo/assets/images/optimized/rev-f3fa24c/www.tssg.ca/wp-content/uploads/2023/04/Active-Listening.jpg",
+    "name": "Communication & Active Listening",
+    "description": "Focuses on interpersonal skills, including empathy, conflict resolution, and how to communicate clearly with people in need.",
+    "number": "6 lessons",
+    "length": "540 mins / 9 hrs",
+    "teacher": {
+      "name": "Rachel Hartsfield",
+      "pic": "./assets/teacher4",
+      "experience": "5 years",
+      "rating": "./assets/star4_5.png"
     },
-    {
-      "link": "https://www.sterlingvolunteers.com/wp-content/uploads/2021/06/TSK-366-730x580-1.jpg",
-      "name": "Leadership in Volunteer Settings",
-      "description": "Develops leadership skills such as team coordination, decision-making, and motivating others in non-profit environments.",
-      "number": "X lessons",
-      "length": "X mins/hrs",
-      "teacher": {
-        "name": "Mergen Tuguldur",
-        "pic": "",
-        "experience": "X years",
-        "rating": ""
-      },
-      "tags": ["sggs", "sdha"]
+    "tags": ["Volunteer Training", "Community Engagement", "Diversity and Inclusion"]
+  },
+  {
+    "link": "https://www.sterlingvolunteers.com/wp-content/uploads/2021/06/TSK-366-730x580-1.jpg",
+    "name": "Leadership in Volunteer Settings",
+    "description": "Develops leadership skills such as team coordination, decision-making, and motivating others in non-profit environments.",
+    "number": "8 lessons",
+    "length": "720 mins / 12 hrs",
+    "teacher": {
+      "name": "Wallace Li",
+      "pic": "./assets/teacher1",
+      "experience": "12 years",
+      "rating": "./assets/star5.png"
     },
-    {
-      "link": "https://static.wixstatic.com/media/11062b_2cb2c16f2bd0467ead35d31a1ea960f8~mv2.jpeg/v1/fill/w_680,h_490,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_2cb2c16f2bd0467ead35d31a1ea960f8~mv2.jpeg",
-      "name": "Event Planning for Non-Profits",
-      "description": "Teaches how to organize fundraisers, community events, and awareness campaigns efficiently and effectively.",
-      "number": "X lessons",
-      "length": "X mins/hrs",
-      "teacher": {
-        "name": "Mergen Tuguldur",
-        "pic": "",
-        "experience": "X years",
-        "rating": ""
-      },
-      "tags": ["sggs", "sdha"]
+    "tags": ["Leadership Skills", "Volunteer Training", "Nonprofit Management"]
+  },
+  {
+    "link": "https://static.wixstatic.com/media/11062b_2cb2c16f2bd0467ead35d31a1ea960f8~mv2.jpeg/v1/fill/w_680,h_490,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_2cb2c16f2bd0467ead35d31a1ea960f8~mv2.jpeg",
+    "name": "Event Planning for Non-Profits",
+    "description": "Teaches how to organize fundraisers, community events, and awareness campaigns efficiently and effectively.",
+    "number": "6 lessons",
+    "length": "540 mins / 9 hrs",
+    "teacher": {
+      "name": "Gabby Walker",
+      "pic": "./assets/teacher5",
+      "experience": "1 year",
+      "rating": "./assets/star3_5.png"
     },
-    {
-      "link": "https://www.teacheracademy.eu/wp-content/uploads/2021/06/environmental_stewardship-608x405.jpg",
-      "name": "Environmental Stewardship",
-      "description": "Focuses on sustainability practices, conservation efforts, and how volunteers can contribute to environmental protection.",
-      "number": "X lessons",
-      "length": "X mins/hrs",
-      "teacher": {
-        "name": "Mergen Tuguldur",
-        "pic": "",
-        "experience": "X years",
-        "rating": ""
-      },
-      "tags": ["sggs", "sdha"]
-    }
-  ]
+    "tags": ["Fundraising Strategies", "Nonprofit Management", "Community Engagement"]
+  },
+  {
+    "link": "https://www.teacheracademy.eu/wp-content/uploads/2021/06/environmental_stewardship-608x405.jpg",
+    "name": "Environmental Stewardship",
+    "description": "Focuses on sustainability practices, conservation efforts, and how volunteers can contribute to environmental protection.",
+    "number": "5 lessons",
+    "length": "450 mins / 7.5 hrs",
+    "teacher": {
+      "name": "Jie Li",
+      "pic": "./assets/teacher6",
+      "experience": "2 years",
+      "rating": "./assets/star3_5.png"
+    },
+    "tags": ["Volunteer Training", "Community Engagement"]
+  }
+]
