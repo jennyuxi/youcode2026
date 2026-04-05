@@ -4,9 +4,9 @@ import React, { useState } from "react"
 import { Button } from "@/components/ui/button"
 import Navbar from "@/components/navbar"
 import FriendsList from "@/components/FriendsList"
+import Footer from "@/components/footer"
 import { useNavigate } from "react-router-dom"
 
-// 🔧 REPLACE: Lesson content, questions, hints, explanations
 const lesson = {
   title: "Lesson 1: Community Outreach",
   content: `In this lesson, we will explore the fundamentals of community outreach and engagement.
@@ -68,79 +68,86 @@ export default function LessonPage() {
         <Navbar />
       </div>
 
-      <div className="flex pt-[76px] mr-80 h-[calc(100vh-76px)]">
-        
-        {/* 🔧 LEFT SIDE: Replace lesson title + lesson text */}
-        <div className="w-1/2 h-full overflow-y-auto p-8 border-r">
+      {/* ✅ CHANGED: layout + green background */}
+      <div className="flex flex-col pt-[76px] min-h-screen mr-80 bg-green-50">
+
+        <div className="flex flex-1">
           
-          <Button
-            variant="outline"
-            className="mb-4"
-            onClick={() => navigate(-1)}
-          >
-            ← Back
-          </Button>
+          <div className="w-1/2 overflow-y-auto p-8 border-r">
+            
+            <Button
+              variant="outline"
+              className="mb-4"
+              onClick={() => navigate(-1)}
+            >
+              ← Back
+            </Button>
 
-          <h1 className="text-3xl font-bold mb-4">{lesson.title}</h1>
+            <h1 className="text-3xl font-bold mb-4">{lesson.title}</h1>
 
-          {lesson.content.split("\n").map((para, idx) => (
-            <p key={idx} className="mb-4 text-base">
-              {para}
-            </p>
-          ))}
-        </div>
+            {lesson.content.split("\n").map((para, idx) => (
+              <p key={idx} className="mb-4 text-base">
+                {para}
+              </p>
+            ))}
+          </div>
 
-        {/* 🔧 RIGHT SIDE: Replace questions + answers + feedback */}
-        <div className="w-1/2 h-full overflow-y-auto p-8">
-          <h2 className="text-2xl font-semibold mb-4 border-b pb-2">
-            Questions
-          </h2>
+          <div className="w-1/2 overflow-y-auto p-8">
+            <h2 className="text-2xl font-semibold mb-4 border-b pb-2">
+              Questions
+            </h2>
 
-          {lesson.questions.map((q, qIndex) => {
-            const selected = selectedAnswers[qIndex]
+            {lesson.questions.map((q, qIndex) => {
+              const selected = selectedAnswers[qIndex]
 
-            return (
-              <div key={qIndex} className="mb-6">
-                <p className="font-semibold">{q.text}</p>
+              return (
+                <div key={qIndex} className="mb-6">
+                  <p className="font-semibold">{q.text}</p>
 
-                <div className="flex flex-col gap-2 mt-2">
-                  {q.answers.map((ans, aIndex) => {
-                    const isSelected = selected === aIndex
-                    let className = "justify-start"
+                  <div className="flex flex-col gap-2 mt-2">
+                    {q.answers.map((ans, aIndex) => {
+                      const isSelected = selected === aIndex
+                      let className = "justify-start"
 
-                    if (isSelected) {
-                      className =
-                        aIndex === q.correct
-                          ? "justify-start bg-green-500 text-white hover:bg-green-500"
-                          : "justify-start bg-red-400 text-white hover:bg-red-400"
-                    }
+                      if (isSelected) {
+                        className =
+                          aIndex === q.correct
+                            ? "justify-start bg-green-500 text-white"
+                            : "justify-start bg-red-400 text-white"
+                      }
 
-                    return (
-                      <Button
-                        key={aIndex}
-                        variant="outline"
-                        className={`${className} hover:bg-gray-100`}
-                        onClick={() => handleClick(qIndex, aIndex)}
-                      >
-                        {ans}
-                      </Button>
-                    )
-                  })}
-                </div>
-
-                {selected !== undefined && (
-                  <div className="mt-3 p-3 rounded-md bg-gray-100 text-sm">
-                    {selected === q.correct ? (
-                      <p className="text-green-700">✅ {q.explanation}</p>
-                    ) : (
-                      <p className="text-red-600">❌ {q.hint}</p>
-                    )}
+                      return (
+                        <Button
+                          key={aIndex}
+                          variant="outline"
+                          className={className}
+                          onClick={() => handleClick(qIndex, aIndex)}
+                        >
+                          {ans}
+                        </Button>
+                      )
+                    })}
                   </div>
-                )}
-              </div>
-            )
-          })}
+
+                  {selected !== undefined && (
+                    <div className="mt-3 p-3 rounded-md bg-gray-100 text-sm">
+                      {selected === q.correct ? (
+                        <p className="text-green-700"> {q.explanation}</p>
+                      ) : (
+                        <p className="text-red-600"> {q.hint}</p>
+                      )}
+                    </div>
+                  )}
+                </div>
+              )
+            })}
+          </div>
+
         </div>
+
+        {/* ✅ FOOTER */}
+        <Footer />
+
       </div>
 
       <div className="fixed top-[76px] right-0 h-[calc(100vh-76px)] w-80">

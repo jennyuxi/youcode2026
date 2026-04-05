@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './components/navbar.tsx';
 import FriendsList from './components/FriendsList.tsx';
-import { Link } from 'react-router-dom';
+import Footer from './components/footer.tsx'
 
 const Forum: React.FC = () => {
   const faqs = [
@@ -81,55 +81,7 @@ const Forum: React.FC = () => {
             </div>
           </div>
 
-          {/* Footer - Placed at the bottom of the scrollable main content */}
-          <footer className="border-t border-gray-300 mt-10 px-6 py-10 bg-gray-50">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              
-              <div>
-                <h2 className="text-xl font-bold mb-2">BEADB</h2>
-                <p className="text-gray-600"> Built by students for volunteers.</p>
-              </div>
-
-              <div>
-                <h3 className="font-semibold mb-2">Navigation</h3>
-                <ul className="space-y-1 text-sm text-gray-600">
-                  <li>
-                    <Link to="/About" className="hover:underline">About</Link>
-                  </li>
-                  <li>
-                    <Link to="/Forum" className="hover:underline">Forum</Link>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="font-semibold mb-2">Connect</h3>
-                <ul className="space-y-1 text-sm text-gray-600">
-                  <li>
-                    <a href="https://github.com/vitejs/vite" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                      GitHub
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://chat.vite.dev/" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                      Discord
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://x.com/vite_js" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                      X.com
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://bsky.app/profile/vite.dev" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                      Bluesky
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-          </footer>
+          <Footer/>
         </main>
 
         {/* Right Sidebar - Static relative to the scrolling main content */}
