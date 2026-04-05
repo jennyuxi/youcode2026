@@ -7,9 +7,9 @@
     "length": "720 mins / 12 hrs",
     "teacher": {
       "name": "Abdul Kassab",
-      "pic": "./assets/teacher7",
+      "pic": "teacher7",
       "experience": "8 years",
-      "rating": "./assets/star4_5.png"
+      "rating": "star4_5"
     },
     "tags": ["Community Engagement", "Diversity and Inclusion"]
   },
@@ -21,9 +21,9 @@
     "length": "900 mins / 15 hrs",
     "teacher": {
       "name": "Annie Lawson",
-      "pic": "./assets/teacher2",
+      "pic": "teacher2",
       "experience": "3 years",
-      "rating": "./assets/star4_5.png"
+      "rating": "star4_5"
     },
     "tags": ["Volunteer Training"]
   },
@@ -35,9 +35,9 @@
     "length": "540 mins / 9 hrs",
     "teacher": {
       "name": "Rachel Hartsfield",
-      "pic": "./assets/teacher4",
+      "pic": "teacher4",
       "experience": "5 years",
-      "rating": "./assets/star4_5.png"
+      "rating": "star4_5"
     },
     "tags": ["Volunteer Training", "Community Engagement", "Diversity and Inclusion"]
   },
@@ -49,9 +49,9 @@
     "length": "720 mins / 12 hrs",
     "teacher": {
       "name": "Wallace Li",
-      "pic": "./assets/teacher1",
+      "pic": "teacher1",
       "experience": "12 years",
-      "rating": "./assets/star5.png"
+      "rating": "star5"
     },
     "tags": ["Leadership Skills", "Volunteer Training", "Nonprofit Management"]
   },
@@ -63,9 +63,9 @@
     "length": "540 mins / 9 hrs",
     "teacher": {
       "name": "Gabby Walker",
-      "pic": "./assets/teacher5",
+      "pic": "teacher5",
       "experience": "1 year",
-      "rating": "./assets/star3_5.png"
+      "rating": "star3_5"
     },
     "tags": ["Fundraising Strategies", "Nonprofit Management", "Community Engagement"]
   },
@@ -77,9 +77,9 @@
     "length": "450 mins / 7.5 hrs",
     "teacher": {
       "name": "Jie Li",
-      "pic": "./assets/teacher6",
+      "pic": "teacher6",
       "experience": "2 years",
-      "rating": "./assets/star3_5.png"
+      "rating": "star3_5"
     },
     "tags": ["Volunteer Training", "Community Engagement"]
   }
