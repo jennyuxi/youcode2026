@@ -5,14 +5,13 @@ import Navbar from './components/navbar.tsx'
 import Course from './components/course.tsx'
 import SearchBar from './components/searchbar.tsx'
 import Filter from './components/filter.tsx'
-import { Link } from 'react-router-dom'
 import courses from './data/courses.json'
 import FriendsList from './components/FriendsList.tsx'
 import Footer from "./components/footer"
 
 function Home() {
     const [query, setQuery] = useState("")
-    const [selectedTag, setSelectedTag] = useState("all")
+    const [selectedTags, setSelectedTags] = useState<string[]>([])
 
     const filteredCourses = courses.filter((course) => {
         const matchesSearch =
@@ -20,7 +19,7 @@ function Home() {
           course.description.toLowerCase().includes(query.toLowerCase())
       
         const matchesTag =
-          selectedTag === "all" || course.tags.includes(selectedTag)
+          selectedTags.length == 0 || selectedTags.some(tag => course.tags.includes(tag))
       
         return matchesSearch && matchesTag
     })
@@ -41,7 +40,7 @@ function Home() {
                 <SearchBar query={query} setQuery={setQuery}/>
                 </div>
                 <div>
-                <Filter selectedTag={selectedTag} setSelectedTag={setSelectedTag}/>
+                <Filter selectedTags={selectedTags} setSelectedTags={setSelectedTags}/>
                 </div>
             </div>
 
@@ -64,10 +63,6 @@ function Home() {
         </div>
 
         {/* Friends list fixed on right */}
-        <div className="fixed top-[76px] right-0 h-[calc(100vh-76px)] w-80">
-            <FriendsList />
-        </div>
-
         <div className="fixed top-[76px] right-0 h-[calc(100vh-76px)] w-80">
             <FriendsList />
         </div>
