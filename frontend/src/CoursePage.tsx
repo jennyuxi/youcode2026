@@ -3,6 +3,8 @@
 import React, { useState } from "react"
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button"
+import Navbar from "@/components/navbar"
+import FriendsList from "@/components/FriendsList"
 
 type Answer = {
   text: string
@@ -37,30 +39,29 @@ export default function CourseHomepage() {
     },
   ]
 
-  // React component for a single question
   const QuestionBlock = ({ question }: { question: Question }) => {
     const [selected, setSelected] = useState<number | null>(null)
 
     return (
-      <div style={{ marginBottom: "20px" }}>
-        <p style={{ fontWeight: 600 }}>{question.text}</p>
-        <div style={{ display: "flex", flexDirection: "column", gap: "8px", marginTop: "8px" }}>
+      <div className="mb-6">
+        <p className="font-semibold">{question.text}</p>
+        <div className="flex flex-col gap-2 mt-2">
           {question.answers.map((ans, idx) => {
-            let style: React.CSSProperties = {
-              backgroundColor: "white",
-              color: "black",
-              border: "1px solid #ccc",
-            }
+            const isSelected = selected === idx
+            let className = "justify-start"
 
-            if (selected === idx) {
-              style.backgroundColor = ans.isCorrect ? "green" : "#f87171" // red-400
-              style.color = "white"
+            if (isSelected) {
+              className =
+                ans.isCorrect
+                  ? "justify-start bg-green-500 text-white hover:bg-green-500"
+                  : "justify-start bg-red-400 text-white hover:bg-red-400"
             }
 
             return (
               <Button
                 key={idx}
-                style={style}
+                variant="outline"
+                className={`${className} hover:bg-gray-100`}
                 onClick={() => setSelected(idx)}
               >
                 {ans.text}
@@ -73,73 +74,85 @@ export default function CourseHomepage() {
   }
 
   return (
-    <div style={{ padding: "40px", maxWidth: "900px", margin: "0 auto", fontFamily: "Arial, sans-serif" }}>
-      
-      {/* COURSE NAME */}
-      <header style={{ marginBottom: "40px" }}>
-        <h1 style={{ fontSize: "36px", marginBottom: "10px" }}>Introduction to Modern Physics</h1>
-      </header>
+    <>
+      {/* Navbar fixed at top */}
+      <div className="hero p-1 border-b border-gray-200 fixed top-0 left-0 right-0 z-50">
+        <Navbar />
+      </div>
 
-      {/* COURSE INTRO & INSTRUCTOR */}
-      <section style={{ marginBottom: "40px" }}>
-        <h2 style={{ fontSize: "28px", marginBottom: "10px", borderBottom: "2px solid #ccc", paddingBottom: "5px" }}>
-          About this course
-        </h2>
-        <p style={{ fontSize: "16px", marginBottom: "10px" }}>
-          This course provides a comprehensive introduction to modern physics, covering classical mechanics to quantum phenomena. Students will learn principles of motion, energy, waves, and particles, and how to apply these concepts to solve real-world problems.
-        </p>
-        <p style={{ fontSize: "16px" }}>
-          <strong>Instructor:</strong> Dr. Jane Doe, with 15+ years of university-level teaching experience, specializes in quantum mechanics and experimental physics.
-        </p>
-      </section>
+      {/* Main content with padding to avoid navbar + space for friends list */}
+      <div className="flex pt-[76px] mr-80 h-[calc(100vh-76px)] overflow-y-auto">
+        {/* Left side: course content */}
+        <div className="flex-1 p-8">
+          {/* COURSE NAME */}
+          <header className="mb-8">
+            <h1 className="text-3xl font-bold mb-2">Introduction to Modern Physics</h1>
+          </header>
 
-      {/* KEY ANNOUNCEMENTS */}
-      <section style={{ marginBottom: "40px" }}>
-        <h2 style={{ fontSize: "28px", marginBottom: "15px", borderBottom: "2px solid #ccc", paddingBottom: "5px" }}>Announcements</h2>
-        <div style={{ marginBottom: "15px" }}>
-          <h3 style={{ fontSize: "22px", marginBottom: "5px" }}>Welcome!</h3>
-          <p style={{ fontSize: "16px", margin: 0 }}>This course will start next week. Make sure you have a notebook and calculator ready.</p>
+          {/* COURSE INTRO & INSTRUCTOR */}
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold mb-2 border-b pb-1">About this course</h2>
+            <p className="mb-2 text-base">
+              This course provides a comprehensive introduction to modern physics, covering classical mechanics to quantum phenomena. Students will learn principles of motion, energy, waves, and particles, and how to apply these concepts to solve real-world problems.
+            </p>
+            <p className="text-base">
+              <strong>Instructor:</strong> Dr. Jane Doe, with 15+ years of university-level teaching experience, specializes in quantum mechanics and experimental physics.
+            </p>
+          </section>
+
+          {/* KEY ANNOUNCEMENTS */}
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold mb-3 border-b pb-1">Announcements</h2>
+            <div className="mb-3">
+              <h3 className="text-xl mb-1">Welcome!</h3>
+              <p className="mb-0">This course will start next week. Make sure you have a notebook and calculator ready.</p>
+            </div>
+            <div className="mb-3">
+              <h3 className="text-xl mb-1">Reminder</h3>
+              <p className="mb-0">Assignment 1 is due Friday. Check the lessons for resources and exercises.</p>
+            </div>
+          </section>
+
+          {/* LESSON SCHEDULE */}
+          <section>
+            <h2 className="text-2xl font-semibold mb-3 border-b pb-1">Lesson Schedule</h2>
+            <Accordion type="single" collapsible>
+              {/* Module 1 - Lesson 1 */}
+              <AccordionItem value="module1-lesson1">
+                <AccordionTrigger>Lesson 1: Overview (10 min)</AccordionTrigger>
+                <AccordionContent className="mt-2">
+                  {module1Lesson1Questions.map((q, i) => (
+                    <QuestionBlock key={i} question={q} />
+                  ))}
+                </AccordionContent>
+              </AccordionItem>
+
+              {/* Module 1 - Lesson 2 */}
+              <AccordionItem value="module1-lesson2">
+                <AccordionTrigger>Lesson 2: Basics (15 min)</AccordionTrigger>
+                <AccordionContent className="mt-2">
+                  <QuestionBlock
+                    question={{
+                      text: "Define force",
+                      answers: [
+                        { text: "Push or pull on an object", isCorrect: true },
+                        { text: "Distance over time", isCorrect: false },
+                        { text: "Energy of motion", isCorrect: false },
+                        { text: "Change in position", isCorrect: false },
+                      ],
+                    }}
+                  />
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </section>
         </div>
-        <div style={{ marginBottom: "15px" }}>
-          <h3 style={{ fontSize: "22px", marginBottom: "5px" }}>Reminder</h3>
-          <p style={{ fontSize: "16px", margin: 0 }}>Assignment 1 is due Friday. Check the lessons for resources and exercises.</p>
+
+        {/* Right side: FriendsList fixed */}
+        <div className="fixed top-[76px] right-0 h-[calc(100vh-76px)] w-80">
+          <FriendsList />
         </div>
-      </section>
-
-      {/* LESSON SCHEDULE */}
-      <section>
-        <h2 style={{ fontSize: "28px", marginBottom: "15px", borderBottom: "2px solid #ccc", paddingBottom: "5px" }}>Lesson Schedule</h2>
-
-        <Accordion type="single" collapsible>
-          {/* Module 1 - Lesson 1 */}
-          <AccordionItem value="module1-lesson1">
-            <AccordionTrigger>Lesson 1: Overview (10 min)</AccordionTrigger>
-            <AccordionContent style={{ marginTop: "10px" }}>
-              {module1Lesson1Questions.map((q, i) => (
-                <QuestionBlock key={i} question={q} />
-              ))}
-            </AccordionContent>
-          </AccordionItem>
-
-          {/* Module 1 - Lesson 2 */}
-          <AccordionItem value="module1-lesson2">
-            <AccordionTrigger>Lesson 2: Basics (15 min)</AccordionTrigger>
-            <AccordionContent style={{ marginTop: "10px" }}>
-              <QuestionBlock
-                question={{
-                  text: "Define force",
-                  answers: [
-                    { text: "Push or pull on an object", isCorrect: true },
-                    { text: "Distance over time", isCorrect: false },
-                    { text: "Energy of motion", isCorrect: false },
-                    { text: "Change in position", isCorrect: false },
-                  ],
-                }}
-              />
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
-      </section>
-    </div>
+      </div>
+    </>
   )
 }
