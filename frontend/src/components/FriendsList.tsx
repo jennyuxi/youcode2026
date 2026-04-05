@@ -19,27 +19,6 @@ const friends: Friend[] = [
   { id: 1, name: "Alice", avatar: "/avatars/alice.jpg", messages: [] },
   { id: 2, name: "Bob", avatar: "/avatars/bob.jpg", messages: [] },
   { id: 3, name: "Charlie", avatar: "/avatars/charlie.jpg", messages: [] },
-  { id: 3, name: "Charlie", avatar: "/avatars/charlie.jpg", messages: [] },
-  { id: 3, name: "Charlie", avatar: "/avatars/charlie.jpg", messages: [] },
-  { id: 3, name: "Charlie", avatar: "/avatars/charlie.jpg", messages: [] },
-  { id: 3, name: "Charlie", avatar: "/avatars/charlie.jpg", messages: [] },
-  { id: 3, name: "Charlie", avatar: "/avatars/charlie.jpg", messages: [] },
-  { id: 3, name: "Charlie", avatar: "/avatars/charlie.jpg", messages: [] },
-  { id: 3, name: "Charlie", avatar: "/avatars/charlie.jpg", messages: [] },
-  { id: 3, name: "Charlie", avatar: "/avatars/charlie.jpg", messages: [] },
-  { id: 3, name: "Charlie", avatar: "/avatars/charlie.jpg", messages: [] },
-  { id: 3, name: "Charlie", avatar: "/avatars/charlie.jpg", messages: [] },
-  { id: 3, name: "Charlie", avatar: "/avatars/charlie.jpg", messages: [] },
-  { id: 3, name: "Charlie", avatar: "/avatars/charlie.jpg", messages: [] },
-  { id: 3, name: "Charlie", avatar: "/avatars/charlie.jpg", messages: [] },
-  { id: 3, name: "Charlie", avatar: "/avatars/charlie.jpg", messages: [] },
-  { id: 3, name: "Charlie", avatar: "/avatars/charlie.jpg", messages: [] },
-  { id: 3, name: "Charlie", avatar: "/avatars/charlie.jpg", messages: [] },
-  { id: 3, name: "Charlie", avatar: "/avatars/charlie.jpg", messages: [] },
-  { id: 3, name: "Charlie", avatar: "/avatars/charlie.jpg", messages: [] },
-  { id: 3, name: "Charlie", avatar: "/avatars/charlie.jpg", messages: [] },
-  { id: 3, name: "Charlie", avatar: "/avatars/charlie.jpg", messages: [] },
-  { id: 3, name: "Charlie", avatar: "/avatars/charlie.jpg", messages: [] },
 ];
 
 export default function FriendsList() {
@@ -55,11 +34,16 @@ export default function FriendsList() {
   };
 
   return (
-    <div className="fixed right-0 top-[76px] bottom-0 w-80 border-l border-gray-200 bg-white shadow-lg flex flex-col overflow-hidden">
+    <div className="flex flex-col h-full bg-white border-l border-gray-200 shadow-lg">
+      {/* Permanent Friends Header */}
+      <div className="px-4 py-3 border-b border-gray-300 text-lg font-semibold">
+        Friends
+      </div>
+
       {activeFriend ? (
         // Chat view
         <Card className="flex flex-col flex-1">
-          <CardHeader>
+          <CardHeader className="px-4 py-2 border-b border-gray-300">
             <CardTitle className="flex justify-between items-center">
               {activeFriend.name}
               <Button
@@ -71,8 +55,9 @@ export default function FriendsList() {
               </Button>
             </CardTitle>
           </CardHeader>
-          <CardContent className="flex-1 flex flex-col">
-            <ScrollArea className="flex-1 h-full">
+
+          <CardContent className="flex flex-col flex-1 p-0">
+            <ScrollArea className="flex-1 px-4 py-2">
               <div className="flex flex-col gap-2">
                 {activeFriend.messages.map((msg, idx) => (
                   <div
@@ -88,7 +73,8 @@ export default function FriendsList() {
                 ))}
               </div>
             </ScrollArea>
-            <div className="flex gap-2">
+
+            <div className="px-4 py-2 border-t border-gray-300 flex gap-2">
               <Input
                 placeholder="Type a message..."
                 value={messageText}
@@ -101,8 +87,8 @@ export default function FriendsList() {
         </Card>
       ) : (
         // Friends list view
-        <ScrollArea className="flex-1 h-full">
-          <div className="flex flex-col divide-y divide-gray-200">
+        <ScrollArea className="flex-1">
+          <div className="flex flex-col divide-y divide-gray-200 mt-2">
             {friends.map((friend) => (
               <div
                 key={friend.id}
