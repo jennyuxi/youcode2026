@@ -62,7 +62,7 @@ export default function CourseHomepage() {
                 This course teaches how to effectively connect with diverse communities, build trust, and organize outreach initiatives that encourage participation. Learners will develop communication strategies, partnership-building skills, and methods to create meaningful community impact.
               </p>
               <p>
-                <strong>Instructor:</strong> Abdul Kassab, with 8+ years of experience in community development and outreach programs.
+                <strong>Instructor:</strong> Marcus Dubois, with 8+ years of experience in community development and outreach programs.
               </p>
             </section>
 
