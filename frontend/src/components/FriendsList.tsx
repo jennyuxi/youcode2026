@@ -114,7 +114,7 @@ export default function FriendsList({ onShowMindMap }: FriendsListProps) {
                 <img
                     src={friend.avatar}
                     alt={friend.name}
-                    className="rounded-full"
+                    className="rounded-full object-cover"
                 />
                 </Avatar>
                 </Link>
